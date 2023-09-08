@@ -1,0 +1,27 @@
+---
+import TheNavigationBar from '../components/TheNavigationBar.astro';
+import TheFooter from '../components/TheFooter.astro';
+import '@fontsource/anton';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/700.css';
+
+const { title } = Astro.props;
+---
+
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="h-full bg-background min-h-[100dvh]">
+    <TheNavigationBar />
+    <main class="min-h-full w-full flex flex-col px-4 lg:px-0">
+      <slot />
+    </main>
+    <TheFooter />
+  </body>
+</html>

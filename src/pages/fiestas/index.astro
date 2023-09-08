@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageTitle from '../../components/PageTitle.astro';
+---
+
+<BaseLayout title="Las fiestas">
+  <section
+    class="pt-24 lg:pt-32 flex flex-col items-center max-w-xl mx-auto gap-y-8"
+  >
+    <PageTitle
+      title="Las fiestas"
+      underlineClasses="bottom-4 -left-1 right-2 h-1/2 skew-y-1 bg-green-300"
+    />
+    <p class="text-xl">
+      Estamos trabajando para ofrecerte el mejor fiestas. Pronto tendremos
+      disponible el programa para que estés al tanto de las actividades y
+      fiestas que se realizarán durante los días señalados.
+    </p>
+  </section>
+</BaseLayout>
