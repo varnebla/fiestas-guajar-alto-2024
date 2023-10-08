@@ -1,13 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageTitle from '../../components/PageTitle.astro';
+import EventCard from '../../components/EventCard.astro';
+
+import { getNextEvents } from '../../services/eventos';
+
+const events = getNextEvents();
 ---
 
 <BaseLayout title="Eventos">
-  <section class="pt-24 lg:pt-32 flex flex-col items-center">
+  <section class="flex flex-col items-center gap-y-12 max-w-5xl mx-auto py-12">
     <PageTitle
       title="Eventos"
       underlineClasses="bottom-4 -left-1 -right-2 h-2/5 -skew-y-1 bg-blue-300"
     />
+    <article class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        events.map((event) => {
+          return <EventCard event={event} />;
+        })
+      }
+    </article>
   </section>
 </BaseLayout>

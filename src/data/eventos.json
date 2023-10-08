@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "slug": "castanada",
+    "name": "Castañada",
+    "thumbnail": "castanyas.jpeg",
+    "description": "<p>La Castañada es una celebración que se centra en la recolección y consumo de castañas, así como de otros alimentos típicos de la temporada otoñal, como boniatos (batatas) y panellets. Las castañas se asan en fuego abierto o en hornos, y luego se consumen calientes. A menudo, se sirven en cucuruchos de papel o se ofrecen en pequeñas bolsas.</p><p>Además de la comida, la Castañada a menudo incluye otras actividades y tradiciones culturales, como la realización de hogueras, la música, el canto de canciones tradicionales y, en algunas regiones, la representación de eventos históricos o folclóricos.</p>",
+    "date": "2023/10/31",
+    "location": "Escuelas, Guájar Alto",
+    "sponsors": [
+      {
+        "id": 0,
+        "name": "",
+        "link": ""
+      }
+    ],
+    "album": []
+  },
+  {
+    "id": 2,
+    "slug": "nochebuena",
+    "name": "Nochebuena",
+    "thumbnail": "nochebuena.jpeg",
+    "description": "<p>La Castañada es una celebración que se centra en la recolección y consumo de castañas, así como de otros alimentos típicos de la temporada otoñal, como boniatos (batatas) y panellets. Las castañas se asan en fuego abierto o en hornos, y luego se consumen calientes. A menudo, se sirven en cucuruchos de papel o se ofrecen en pequeñas bolsas.</p><p>Además de la comida, la Castañada a menudo incluye otras actividades y tradiciones culturales, como la realización de hogueras, la música, el canto de canciones tradicionales y, en algunas regiones, la representación de eventos históricos o folclóricos.</p>",
+    "date": "2023/12/24",
+    "location": "Escuelas, Guájar Alto",
+    "sponsors": [
+      {
+        "id": 0,
+        "name": "",
+        "link": ""
+      }
+    ],
+    "album": []
+  },
+  {
+    "id": 3,
+    "slug": "nochevieja",
+    "name": "Nochevieja",
+    "thumbnail": "nochevieja.jpeg",
+    "description": "<p>La Castañada es una celebración que se centra en la recolección y consumo de castañas, así como de otros alimentos típicos de la temporada otoñal, como boniatos (batatas) y panellets. Las castañas se asan en fuego abierto o en hornos, y luego se consumen calientes. A menudo, se sirven en cucuruchos de papel o se ofrecen en pequeñas bolsas.</p><p>Además de la comida, la Castañada a menudo incluye otras actividades y tradiciones culturales, como la realización de hogueras, la música, el canto de canciones tradicionales y, en algunas regiones, la representación de eventos históricos o folclóricos.</p>",
+    "date": "2023/12/31",
+    "location": "Escuelas, Guájar Alto",
+    "sponsors": [
+      {
+        "id": 0,
+        "name": "",
+        "link": ""
+      }
+    ],
+    "album": []
+  },
+  {
+    "id": 4,
+    "slug": "guajar-extreme",
+    "name": "Guájar Extreme",
+    "thumbnail": "guajar-extreme.webp",
+    "description": "<p>La Castañada es una celebración que se centra en la recolección y consumo de castañas, así como de otros alimentos típicos de la temporada otoñal, como boniatos (batatas) y panellets. Las castañas se asan en fuego abierto o en hornos, y luego se consumen calientes. A menudo, se sirven en cucuruchos de papel o se ofrecen en pequeñas bolsas.</p><p>Además de la comida, la Castañada a menudo incluye otras actividades y tradiciones culturales, como la realización de hogueras, la música, el canto de canciones tradicionales y, en algunas regiones, la representación de eventos históricos o folclóricos.</p>",
+    "date": "2024/02/19",
+    "location": "Guájar Alto",
+    "sponsors": [
+      {
+        "id": 0,
+        "name": "",
+        "link": ""
+      }
+    ],
+    "album": []
+  }
+]

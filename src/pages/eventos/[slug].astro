@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageTitle from '../../components/PageTitle.astro';
+import { Image } from 'astro:assets';
+import eventos from '../../data/eventos.json';
+import { getEventBySlug } from '../../services/eventos';
+
+export const getStaticPaths = (() => {
+  return eventos.map((evento) => ({
+    params: {
+      slug: evento.slug
+    }
+  }));
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+
+const event = getEventBySlug(slug);
+---
+
+<BaseLayout>
+  <section class="flex flex-col items-center gap-y-12 max-w-5xl mx-auto py-12">
+    <PageTitle title={event.name} />
+    <Image src={event.thumbnail} alt={event.name} width={620} height={300} />
+    <div set:html={event.description} class="max-w-xl mx-auto text-lg" />
+  </section>
+</BaseLayout>

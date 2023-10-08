@@ -1,14 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import EventCard from '../components/EventCard.astro';
+
+import { getNextEvents } from '../services/eventos';
 
 import { Image } from 'astro:assets';
-import bgImageSrc from '../assets/guajar-background.jpeg';
+import bgImageSrc from '../assets/jurite-modified.png';
+
+const eventsList = getNextEvents({ limit: 3 });
 ---
 
 <BaseLayout title="Fiestas">
-  <!-- <Image src={bgImageSrc} alt="Fiestas" width="680" height="300" fetchpriority='high'/> -->
   <section
-    class="h-auto lg:h-[100dvh] w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 pt-32 lg:pb-12 lg:px-8"
+    class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 pt-12 lg:pb-12 lg:px-8"
   >
     <div class="flex flex-col justify-start row-span-1 lg:col-span-1">
       <h1
@@ -43,7 +47,18 @@ import bgImageSrc from '../assets/guajar-background.jpeg';
         <span>Guájar Alto</span>
       </h2>
     </div>
-    <div class="lg:row-span-2 bg-yellow-200 h-64 lg:h-auto"></div>
+    <div
+      class="lg:row-span-2 bg-yellow-200 h-64 lg:h-auto lg:max-w-xl lg:ml-auto w-full overflow-hidden aspect-video lg:aspect-square border-2 border-black"
+    >
+      <Image
+        src={bgImageSrc}
+        alt="Fiestas"
+        width="480"
+        height="300"
+        fetchpriority="high"
+        class="object-cover w-full aspect-video lg:aspect-square"
+      />
+    </div>
   </section>
   <section
     class="flex flex-col items-center gap-y-12 py-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
@@ -109,33 +124,12 @@ import bgImageSrc from '../assets/guajar-background.jpeg';
     <article
       class="max-w-xs md:max-w-none grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 w-full"
     >
-      <div class="border-2 border-black">
-        <div class="w-full h-48 bg-blue-300"></div>
-        <div class="p-4 w-full flex flex-col text-xl border-t-2 border-black">
-          <p class="font-bold">Castañada</p>
-          <p class="">31 de octubre</p>
-        </div>
-      </div>
-      <div class="border-2 border-black">
-        <div class="w-full h-48 bg-blue-300"></div>
-        <div class="p-4 w-full flex flex-col text-xl border-t-2 border-black">
-          <p class="font-bold">Nochebuena</p>
-          <p class="">24 de diciembre</p>
-        </div>
-      </div>
-      <div class="border-2 border-black">
-        <div class="w-full h-48 bg-blue-300"></div>
-        <div class="p-4 w-full flex flex-col text-xl border-t-2 border-black">
-          <p class="font-bold">Semana Santa</p>
-          <p class="">28 de marzo de 2024</p>
-        </div>
-      </div>
+      {
+        eventsList.map((event) => {
+          return <EventCard event={event} />;
+        })
+      }
     </article>
-    <!-- <a
-      href="/eventos"
-      class="py-2 px-3 text-lg bg-background hover:bg-blue-300 transition-colors duration-50 text-black border-2 border-black text-center self-center"
-      >Ver todos los eventos -></a
-    > -->
     <a
       href="/eventos"
       class="py-3 px-4 text-lg bg-black text-background text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 duration-100 ease-in"

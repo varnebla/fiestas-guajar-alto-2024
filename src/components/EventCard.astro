@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+const { event } = Astro.props;
+---
+
+<a
+  href={`eventos/${event.slug}`}
+  class="border-2 border-black hover:shadow-md group"
+>
+  <div class="w-full h-48 bg-blue-300 overflow-hidden">
+    <Image
+      src={event.thumbnail}
+      alt={event.name}
+      width={420}
+      height={120}
+      class="object-cover group-hover:scale-[1.025] transition-transform duration-300 delay-75"
+    />
+  </div>
+  <div class="p-4 w-full flex flex-col text-xl border-t-2 border-black">
+    <p class="font-bold">{event.name}</p>
+    <p class="">{event.date}</p>
+  </div>
+</a>
