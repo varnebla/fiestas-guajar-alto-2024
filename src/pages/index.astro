@@ -5,18 +5,21 @@ import EventCard from '../components/EventCard.astro';
 import { getNextEvents } from '../services/eventos';
 
 import { Image } from 'astro:assets';
-import bgImageSrc from '../assets/jurite-modified.png';
+import bgImageSrc from '../assets/fiestas_bg.jpeg';
+import aboutFiestasSrc from '../assets/sobre-las-fiestas-cervezas.jpeg';
 
 const eventsList = getNextEvents({ limit: 3 });
 ---
 
 <BaseLayout title="Fiestas">
   <section
-    class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 pt-12 lg:pb-12 lg:px-8"
+    class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 py-12 lg:px-8"
   >
-    <div class="flex flex-col justify-start row-span-1 lg:col-span-1">
+    <div
+      class="flex flex-col justify-start items-center lg:items-start row-span-1 lg:col-span-1"
+    >
       <h1
-        class="font-space text-5xl sm:text-7xl uppercase tracking-wide leading-none"
+        class="font-space text-5xl sm:text-7xl xl:text-8xl uppercase tracking-wide leading-none text-center lg:text-left"
       >
         <span class="relative">
           <span
@@ -41,29 +44,31 @@ const eventsList = getNextEvents({ limit: 3 });
       </h1>
     </div>
     <div class="flex flex-col justify-center row-span-1 lg:justify-end">
-      <h2 class="font-space text-3xl sm:text-5xl uppercase">
+      <h2
+        class="font-space text-3xl sm:text-5xl uppercase text-center lg:text-left"
+      >
         <span>14 - 16 Agosto</span>
         <br />
         <span>Guájar Alto</span>
       </h2>
     </div>
     <div
-      class="lg:row-span-2 bg-yellow-200 h-64 lg:h-auto lg:max-w-xl lg:ml-auto w-full overflow-hidden aspect-video lg:aspect-square border-2 border-black"
+      class="lg:row-span-2 bg-yellow-200 h-64 lg:h-auto max-w-xl lg:ml-auto w-full mx-auto overflow-hidden aspect-video lg:aspect-square border-2 border-black"
     >
       <Image
         src={bgImageSrc}
         alt="Fiestas"
-        width="480"
-        height="300"
+        width={620}
+        height={300}
         fetchpriority="high"
-        class="object-cover w-full aspect-video lg:aspect-square"
+        class="object-cover lg:w-full"
       />
     </div>
   </section>
   <section
-    class="flex flex-col items-center gap-y-12 py-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
+    class="flex flex-col items-center gap-y-8 lg:gap-y-12 lg:pt-12 pb-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
   >
-    <h3 class="font-space text-4xl lg:text-6xl">
+    <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
       <span class="relative">
         <span
           class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-green-300"
@@ -75,32 +80,36 @@ const eventsList = getNextEvents({ limit: 3 });
       class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-x-12 gap-y-8"
     >
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 grid-rows-3 sm:grid-rows-2 grid-flow-col gap-4"
+        class="border-2 border-black w-full overflow-hidden aspect-video lg:aspect-square"
       >
-        <div class="row-span-1 bg-green-300 border-2 border-black"></div>
-        <div class="row-span-1 bg-green-300 border-2 border-black"></div>
-        <div
-          class="row-span-1 sm:row-span-2 bg-green-300 border-2 border-black h-60 sm:h-[520px]"
-        >
-        </div>
+        <Image
+          src={aboutFiestasSrc}
+          alt="Fiestas"
+          width={620}
+          height={300}
+          fetchpriority="high"
+          class="object-cover lg:w-full"
+        />
       </div>
       <div
         class="flex flex-col justify-start lg:justify-center gap-y-4 text-xl"
       >
         <p>
-          Chalk and cheese boursin chalk and cheese. Brie cheese triangles
-          pecorino halloumi ricotta bocconcini edam danish fontina. Edam red
-          leicester red leicester queso macaroni cheese st. agur blue cheese
-          feta who moved my cheese.
+          ¡Bienvenidos a las fiestas patronales de Guájar Alto! Estas
+          celebraciones, que tienen lugar del 14 al 16 de agosto, son un
+          vibrante homenaje a la Virgen de la Aurora, patrona de nuestro pueblo.
+          Durante tres días repletos de alegría y devoción, Guájar Alto se llena
+          de vida y color.
         </p>
         <p>
-          Cheesy grin blue castello cheddar cheddar red leicester danish fontina
-          roquefort goat. Gouda monterey jack fromage frais port-salut fromage
-          cream cheese roquefort fromage. Hard cheese pepper.
+          Los visitantes podrán deleitarse con una gran variedad de eventos
+          culturales y actividades para todas las edades. Conciertos en vivo,
+          competiciones deportivas y degustaciones de nuestra gastronomía son
+          algunas de ellas.
         </p>
         <p>
-          Pepper jack taleggio smelly cheese. Cheesy grin fromage frais halloumi
-          stinking bishop bavarian bergkas.
+          Únete a nosotros para celebrar con pasión las fiestas patronales de
+          Guájar Alto. ¡Te esperamos con los brazos abiertos!
         </p>
       </div>
     </article>
@@ -111,9 +120,9 @@ const eventsList = getNextEvents({ limit: 3 });
     >
   </section>
   <section
-    class="flex flex-col items-center gap-y-12 py-12 w-full max-w-5xl mx-auto"
+    class="flex flex-col items-center gap-y-8 lg:gap-y-12 pb-12 w-full max-w-5xl mx-auto"
   >
-    <h3 class="font-space text-4xl lg:text-6xl">
+    <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
       <span class="relative">
         <span
           class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-blue-300"
