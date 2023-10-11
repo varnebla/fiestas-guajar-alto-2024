@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+const { event } = Astro.props;
+---
+
+<article class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12">
+  <h3
+    class="font-space font-medium tracking-tight text-4xl lg:text-6xl text-center"
+  >
+    <span class="relative">
+      <!-- <span
+        class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-red-300"
+      ></span> -->
+      <span class="relative">{event.title}</span>
+    </span>
+  </h3>
+  <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-x-12 gap-y-8">
+    <div
+      class="border-2 border-black w-full overflow-hidden aspect-video lg:aspect-square"
+    >
+      <Image
+        src={event.thumbnail}
+        alt="Fiestas"
+        width={620}
+        height={300}
+        fetchpriority="high"
+        class="object-cover lg:w-full"
+      />
+    </div>
+    <section class="my-auto flex flex-col gap-y-4">
+      <p class="text-gray-600">{event.location} - {event.date}</p>
+      <div
+        set:html={event.shortDescription}
+        class="max-w-xl mx-auto text-xl [&_p]:mb-4"
+      />
+    </section>
+  </div>
+  {
+    event.internLinkUrl ? (
+      <a
+        href={event.nternLinkUrl}
+        class="py-3 px-4 text-lg bg-black text-background text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 duration-100 ease-in"
+      >
+        {event.linkText}
+      </a>
+    ) : (
+      <a
+        href={event.externalLinkUrl}
+        target="_blank"
+        class="py-3 px-4 text-lg bg-black text-background text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 duration-100 ease-in"
+      >
+        {event.linkText}
+      </a>
+    )
+  }
+</article>

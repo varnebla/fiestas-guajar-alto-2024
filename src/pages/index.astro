@@ -1,17 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EventCard from '../components/EventCard.astro';
+import HighlightedEventSection from '../components/HighlightedEventSection.astro';
 
-import { getNextEvents } from '../services/eventos';
+import { getNextEvents, getHighlightedEvent } from '../services/eventos';
 
 import { Image } from 'astro:assets';
 import bgImageSrc from '../assets/fiestas_bg.jpeg';
 import aboutFiestasSrc from '../assets/sobre-las-fiestas-cervezas.jpeg';
 
 const eventsList = getNextEvents({ limit: 3 });
+const highlightedEvent = getHighlightedEvent();
 ---
 
-<BaseLayout title="Fiestas">
+<BaseLayout title="Fiestas Guájar Alto 2024 | Granada">
   <section
     class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 py-8 lg:py-12 lg:px-8"
   >
@@ -65,32 +67,23 @@ const eventsList = getNextEvents({ limit: 3 });
       />
     </div>
   </section>
+  <section class="w-full max-w-2xl lg:max-w-5xl mx-auto">
+    <HighlightedEventSection event={highlightedEvent} />
+  </section>
   <section
-    class="flex flex-col items-center gap-y-8 lg:gap-y-12 lg:pt-12 pb-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
+    class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
   >
     <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
       <span class="relative">
-        <span
+        <!-- <span
           class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-green-300"
-        ></span>
+        ></span> -->
         <span class="relative">Sobre las fiestas</span>
       </span>
     </h3>
     <article
       class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-x-12 gap-y-8"
     >
-      <div
-        class="border-2 border-black w-full overflow-hidden aspect-video lg:aspect-square"
-      >
-        <Image
-          src={aboutFiestasSrc}
-          alt="Fiestas"
-          width={620}
-          height={300}
-          fetchpriority="high"
-          class="object-cover lg:w-full"
-        />
-      </div>
       <div
         class="flex flex-col justify-start lg:justify-center gap-y-4 text-xl"
       >
@@ -112,6 +105,18 @@ const eventsList = getNextEvents({ limit: 3 });
           Guájar Alto. ¡Te esperamos con los brazos abiertos!
         </p>
       </div>
+      <div
+        class="border-2 border-black w-full overflow-hidden aspect-video lg:aspect-square"
+      >
+        <Image
+          src={aboutFiestasSrc}
+          alt="Fiestas"
+          width={620}
+          height={300}
+          fetchpriority="high"
+          class="object-cover lg:w-full"
+        />
+      </div>
     </article>
     <a
       href="/fiestas"
@@ -120,19 +125,17 @@ const eventsList = getNextEvents({ limit: 3 });
     >
   </section>
   <section
-    class="flex flex-col items-center gap-y-8 lg:gap-y-12 pb-12 w-full max-w-5xl mx-auto"
+    class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
   >
     <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
       <span class="relative">
-        <span
+        <!-- <span
           class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-blue-300"
-        ></span>
+        ></span> -->
         <span class="relative">Próximos eventos</span>
       </span>
     </h3>
-    <article
-      class="max-w-xs md:max-w-none grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 w-full"
-    >
+    <article class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 w-full">
       {
         eventsList.map((event) => {
           return <EventCard event={event} />;

@@ -1,6 +1,8 @@
 ---
 import TheNavigationBar from '../components/TheNavigationBar.astro';
 import TheFooter from '../components/TheFooter.astro';
+import AsideMenu from '../components/AsideMenu.astro';
+
 import '@fontsource/anton';
 import '@fontsource-variable/space-grotesk';
 import '@fontsource/dm-sans/400.css';
@@ -22,6 +24,7 @@ const { title } = Astro.props;
     <main class="min-h-full w-full flex flex-col px-4 py-20 lg:px-0">
       <slot />
     </main>
+    <AsideMenu />
     <TheFooter />
   </body>
 </html>

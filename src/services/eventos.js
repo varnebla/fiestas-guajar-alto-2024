@@ -52,6 +52,31 @@ export function getEventBySlug(slug) {
   return event;
 }
 
+export function getHighlightedEvent() {
+  const event = events.find((event) => !!event.highlighted);
+  if (!event) return null;
+
+  const { date, location, slug } = event;
+  const {
+    title,
+    short_description,
+    link_text,
+    extern_link_url,
+    intern_link_url
+  } = event.highlighted;
+
+  return {
+    title,
+    thumbnail: pictures[slug],
+    shortDescription: short_description,
+    linkText: link_text,
+    externalLinkUrl: extern_link_url,
+    internLinkUrl: intern_link_url,
+    date: formatDate(date),
+    location
+  };
+}
+
 function formatDate(date) {
   return new Date(date).toLocaleDateString('es-ES', {
     day: 'numeric',

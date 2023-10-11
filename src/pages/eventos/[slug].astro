@@ -24,13 +24,15 @@ const event = getEventBySlug(slug);
     class="flex flex-col items-center gap-y-8 max-w-5xl mx-auto pt-8 lg:pt-10"
   >
     <PageTitle title={event.name} />
-    <Image
-      src={event.thumbnail}
-      alt={event.name}
-      width={576}
-      height={300}
-      class="border-2 border-black"
-    />
+    <div class="w-full aspect-video overflow-hidden">
+      <Image
+        src={event.thumbnail}
+        alt={event.name}
+        width={576}
+        height={300}
+        class="border-2 border-black object-cover w-full"
+      />
+    </div>
     <div
       set:html={event.description}
       class="max-w-xl mx-auto text-xl [&_p]:mb-4"

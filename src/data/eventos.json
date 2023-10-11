@@ -14,7 +14,8 @@
         "link": ""
       }
     ],
-    "album": []
+    "album": [],
+    "highlighted": null
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
         "link": ""
       }
     ],
-    "album": []
+    "album": [],
+    "highlighted": null
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@
         "link": ""
       }
     ],
-    "album": []
+    "album": [],
+    "highlighted": null
   },
   {
     "id": 4,
@@ -65,6 +68,13 @@
         "link": ""
       }
     ],
-    "album": []
+    "album": [],
+    "highlighted": {
+      "title": "¡Apúntate a la Guájar Extreme!",
+      "short_description": "<p>Disfruta de una jornada de ciclismo de montaña en Guájar Alto. Guájar Extreme es una marcha competitiva limitada a <strong>250 participantes</strong> en los que se podremos disfrutar de bellos paisajes de montaña y la Costa Tropical.</p><p>El recorrido es de <strong>46km</strong> y contará con un desnivel de <strong>1700m</strong>.</p><p>Al finalizar la competición, se celebrará una paella popular en el pueblo a la que los participantes serán invitados. </p>",
+      "link_text": "¡Quiero apuntarme!",
+      "extern_link_url": "http://global-tempo.com/carreras.php?id=1959",
+      "intern_link_url": null      
+    }
   }
 ]

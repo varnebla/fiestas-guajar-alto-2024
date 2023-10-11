@@ -1,0 +1,68 @@
+---
+
+---
+
+<aside
+  id="sideMenu"
+  class="fixed inset-0 z-10 bg-background h-full w-full flex-col items-center justify-start overflow-hidden py-16 gap-16 blur-in"
+  style="display: none;"
+>
+  <button id="closeSideMenuButton" class="absolute right-0 top-0 mx-8 my-4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <a href="/" class="text-2xl font-semibold">GA '24</a>
+  <nav
+    id="sideMenuLinksList"
+    class="flex flex-col gap-y-10 font-medium text-2xl text-center"
+  >
+    <a href="/eventos" class="hover:underline">Eventos</a>
+    <a href="/pueblo" class="hover:underline">El pueblo</a>
+    <a href="/fiestas" class="hover:underline">Las fiestas</a>
+  </nav>
+</aside>
+
+<script>
+  const listOfLinks = [...document.querySelectorAll('#sideMenuLinksList a')];
+  const sideMenu = document.querySelector('#sideMenu') as HTMLElement;
+  const bodyContainer = document.querySelector('body') as HTMLElement;
+  const closeButton = document.querySelector('#closeSideMenuButton');
+
+  listOfLinks.forEach((link) =>
+    link.addEventListener('click', () => {
+      sideMenu.style.display = 'none';
+      bodyContainer.style.overflowY = null;
+    })
+  );
+
+  closeButton.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
+    bodyContainer.style.overflowY = null;
+  });
+</script>
+<style>
+  .blur-in {
+    animation: blur-in 0.1s linear both;
+  }
+  @keyframes blur-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+</style>
