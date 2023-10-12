@@ -22,7 +22,7 @@
     "slug": "nochebuena",
     "name": "Nochebuena",
     "thumbnail": "nochebuena.jpeg",
-    "description": "<p>La Castañada es una celebración que se centra en la recolección y consumo de castañas, así como de otros alimentos típicos de la temporada otoñal, como boniatos (batatas) y panellets. Las castañas se asan en fuego abierto o en hornos, y luego se consumen calientes. A menudo, se sirven en cucuruchos de papel o se ofrecen en pequeñas bolsas.</p><p>Además de la comida, la Castañada a menudo incluye otras actividades y tradiciones culturales, como la realización de hogueras, la música, el canto de canciones tradicionales y, en algunas regiones, la representación de eventos históricos o folclóricos.</p>",
+    "description": "<p>Este <strong>24 de diciembre</strong>, le damos la bienvenida a todos a la emocionante Fiesta Previa a Nochebuena en el edificio de las escuelas del pueblo. Esta celebración promete ser una velada inolvidable llena de <strong>música, ambiente festivo y diversión</strong>.</p><p>Te invitamos a unirte a nosotros en el que será pistoletazo de inicio a las festividades navideñas. La diversión <strong>comienza a las 18h</strong>, así que asegúrate de estar allí y ser parte de este gran evento.</p><p>Celebremos juntos la magia de la Navidad en la Fiesta Previa a Nochebuena. ¡Te esperamos!</p>",
     "date": "2023/12/24",
     "location": "Escuelas, Guájar Alto",
     "sponsors": [
@@ -40,7 +40,7 @@
     "slug": "nochevieja",
     "name": "Nochevieja",
     "thumbnail": "nochevieja.jpeg",
-    "description": "<p>La Castañada es una celebración que se centra en la recolección y consumo de castañas, así como de otros alimentos típicos de la temporada otoñal, como boniatos (batatas) y panellets. Las castañas se asan en fuego abierto o en hornos, y luego se consumen calientes. A menudo, se sirven en cucuruchos de papel o se ofrecen en pequeñas bolsas.</p><p>Además de la comida, la Castañada a menudo incluye otras actividades y tradiciones culturales, como la realización de hogueras, la música, el canto de canciones tradicionales y, en algunas regiones, la representación de eventos históricos o folclóricos.</p>",
+    "description": "<p>Guájar Alto se prepara para despedir el año de una manera excepcional y unir al pueblo en una noche inolvidable. <strong>Este 31 de diciembre</strong>, en las Escuelas de Guájar Alto, estáis todos invitados a un evento especial de Nochevieja que promete ser una celebración llena de música, buena compañía y emoción mientras entramos al año nuevo.</p><p>La Nochevieja es una de las festividades más esperadas del año, y qué mejor manera de celebrarla que en <strong>compañía de vecinos y amigos</strong> en un lugar emblemático como nuestras escuelas. Esta celebración comunitaria es una oportunidad para fortalecer lazos y crear recuerdos que perdurarán en el tiempo.</p><p><strong>Después de las campanadas</strong>, trae a tus amigos, a tus vecinos y tu espíritu festivo, y únete a esta memorable celebración. ¡Esperamos verte allí y dar juntos la bienvenida al Año Nuevo!</p>",
     "date": "2023/12/31",
     "location": "Escuelas, Guájar Alto",
     "sponsors": [
@@ -58,7 +58,7 @@
     "slug": "guajar-extreme",
     "name": "Guájar Extreme",
     "thumbnail": "guajar-extreme.webp",
-    "description": "<p>La Castañada es una celebración que se centra en la recolección y consumo de castañas, así como de otros alimentos típicos de la temporada otoñal, como boniatos (batatas) y panellets. Las castañas se asan en fuego abierto o en hornos, y luego se consumen calientes. A menudo, se sirven en cucuruchos de papel o se ofrecen en pequeñas bolsas.</p><p>Además de la comida, la Castañada a menudo incluye otras actividades y tradiciones culturales, como la realización de hogueras, la música, el canto de canciones tradicionales y, en algunas regiones, la representación de eventos históricos o folclóricos.</p>",
+    "description": "<p>El 19 de febrero se celebrará en Guájar Alto la sexta edición de Guájar Extreme, una emocionante competición de mountain bike que te llevará a explorar los montes majestuosos de la Costa Tropical. Esta cita promete emociones fuertes y una experiencia única para los amantes del ciclismo de montaña.</p><p>El punto de partida será el pueblo de Guájar Alto a las 9:30h, desde donde los participantes se embarcarán en una jornada de desafío y aventura. Descubre la belleza natural de nuestra región mientras recorres senderos desafiantes y disfrutas de las espectaculares vistas que solo los montes de la Costa Tropical pueden ofrecer.</p><p>Pero la diversión no termina con la competición. Al concluir la prueba, todos los participantes y espectadores están invitados a una paella popular en la que podrán relajarse, compartir historias y disfrutar del ambiente festivo. </p><p>¡No lo pienses más, las plazas son limitadas a 250 participantes!</p><br/><p><strong>Información sobre la prueba:</strong></p><p>Inscripciones abiertas hasta el 17/02 a las 12h</p><p>Recogida de dorsales en Decathlon Motril (Vie 18/02 de 18h a 20h y Sáb 19/02 de 11h a 14h y de 18h a 20h)</p><br/><p><strong>Precios:</strong></p><ul><p>- 20€ hasta el 19/12</p><p>- 23€ desde el 20/12 hasta el 19/01/24</p><p>- 25€ a partir del 20/01</p>",
     "date": "2024/02/19",
     "location": "Guájar Alto",
     "sponsors": [
@@ -74,7 +74,7 @@
       "short_description": "<p>Disfruta de una jornada de ciclismo de montaña en Guájar Alto. Guájar Extreme es una marcha competitiva limitada a <strong>250 participantes</strong> en los que se podremos disfrutar de bellos paisajes de montaña y la Costa Tropical.</p><p>El recorrido es de <strong>46km</strong> y contará con un desnivel de <strong>1700m</strong>.</p><p>Al finalizar la competición, se celebrará una paella popular en el pueblo a la que los participantes serán invitados. </p>",
       "link_text": "¡Quiero apuntarme!",
       "extern_link_url": "http://global-tempo.com/carreras.php?id=1959",
-      "intern_link_url": null      
+      "intern_link_url": null
     }
   }
 ]
