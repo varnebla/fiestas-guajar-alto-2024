@@ -7,7 +7,7 @@ const { event } = Astro.props;
   href={`eventos/${event.slug}`}
   class="border-2 border-black hover:shadow-md group"
 >
-  <div class="w-full h-48 bg-blue-300 overflow-hidden">
+  <div class="w-full h-48 bg-white overflow-hidden">
     <Image
       src={event.thumbnail}
       alt={event.name}
@@ -16,7 +16,9 @@ const { event } = Astro.props;
       class="object-cover group-hover:scale-[1.025] transition-transform duration-300 delay-75"
     />
   </div>
-  <div class="p-4 w-full flex flex-col text-xl border-t-2 border-black">
+  <div
+    class="p-4 w-full flex flex-col text-xl border-t-2 border-black bg-white"
+  >
     <p class="font-bold">{event.name}</p>
     <p class="">{event.date}</p>
   </div>

@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EventCard from '../components/EventCard.astro';
 import HighlightedEventSection from '../components/HighlightedEventSection.astro';
+import BaseLink from '../components/BaseLink.astro';
 
 import { getNextEvents, getHighlightedEvent } from '../services/eventos';
 
@@ -15,7 +16,7 @@ const highlightedEvent = getHighlightedEvent();
 
 <BaseLayout title="Fiestas Guájar Alto 2024 | Granada">
   <section
-    class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 py-8 lg:py-12 lg:px-8"
+    class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 py-8 lg:pt-20 lg:pb-24 lg:px-8"
   >
     <div
       class="flex flex-col justify-start items-center lg:items-start row-span-1 lg:col-span-1"
@@ -67,85 +68,101 @@ const highlightedEvent = getHighlightedEvent();
       />
     </div>
   </section>
-  <section class="w-full max-w-2xl lg:max-w-5xl mx-auto">
-    <HighlightedEventSection event={highlightedEvent} />
+  <section class="w-full">
+    <article class="max-w-2xl lg:max-w-5xl mx-auto">
+      <HighlightedEventSection event={highlightedEvent} />
+    </article>
   </section>
-  <section
-    class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
-  >
-    <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
-      <span class="relative">
-        <!-- <span
+  <section class="w-full">
+    <article
+      class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 max-w-2xl lg:max-w-5xl mx-auto"
+    >
+      <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
+        <span class="relative">
+          <!-- <span
           class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-green-300"
         ></span> -->
-        <span class="relative">Sobre las fiestas</span>
-      </span>
-    </h3>
-    <article
-      class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-x-12 gap-y-8"
-    >
-      <div
-        class="flex flex-col justify-start lg:justify-center gap-y-4 text-xl"
+          <span class="relative">Sobre las fiestas</span>
+        </span>
+      </h3>
+      <section
+        class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-x-12 gap-y-8"
       >
-        <p>
-          ¡Bienvenidos a las fiestas patronales de Guájar Alto! Estas
-          celebraciones, que tienen lugar del 14 al 16 de agosto, son un
-          vibrante homenaje a la Virgen de la Aurora, patrona de nuestro pueblo.
-          Durante tres días repletos de alegría y devoción, Guájar Alto se llena
-          de vida y color.
-        </p>
-        <p>
-          Los visitantes podrán deleitarse con una gran variedad de eventos
-          culturales y actividades para todas las edades. Conciertos en vivo,
-          competiciones deportivas y degustaciones de nuestra gastronomía son
-          algunas de ellas.
-        </p>
-        <p>
-          Únete a nosotros para celebrar con pasión las fiestas patronales de
-          Guájar Alto. ¡Te esperamos con los brazos abiertos!
-        </p>
-      </div>
-      <div
-        class="border-2 border-black w-full overflow-hidden aspect-video lg:aspect-square"
-      >
-        <Image
-          src={aboutFiestasSrc}
-          alt="Fiestas"
-          width={620}
-          height={300}
-          fetchpriority="high"
-          class="object-cover lg:w-full"
-        />
-      </div>
+        <div
+          class="flex flex-col justify-start lg:justify-center gap-y-4 text-xl"
+        >
+          <p>
+            ¡Bienvenidos a las fiestas patronales de Guájar Alto! Estas
+            celebraciones, que tienen lugar del 14 al 16 de agosto, son un
+            vibrante homenaje a la Virgen de la Aurora, patrona de nuestro
+            pueblo. Durante tres días repletos de alegría y devoción, Guájar
+            Alto se llena de vida y color.
+          </p>
+          <p>
+            Los visitantes podrán deleitarse con una gran variedad de eventos
+            culturales y actividades para todas las edades. Conciertos en vivo,
+            competiciones deportivas y degustaciones de nuestra gastronomía son
+            algunas de ellas.
+          </p>
+          <p>
+            Únete a nosotros para celebrar con pasión las fiestas patronales de
+            Guájar Alto. ¡Te esperamos con los brazos abiertos!
+          </p>
+        </div>
+        <div
+          class="border-2 border-black w-full overflow-hidden aspect-video lg:aspect-square"
+        >
+          <Image
+            src={aboutFiestasSrc}
+            alt="Fiestas"
+            width={620}
+            height={300}
+            fetchpriority="high"
+            class="object-cover lg:w-full"
+          />
+        </div>
+      </section>
+      <BaseLink
+        link="/fiestas"
+        extraClasses="bg-green-300"
+        text="Ver el programa de fiestas"
+      />
+      <!-- <a
+        href="/fiestas"
+        class="py-3 px-4 text-lg bg-green-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
+        >Ver el programa de fiestas</a
+      > -->
     </article>
-    <a
-      href="/fiestas"
-      class="py-3 px-4 text-lg bg-black text-background text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 duration-100 ease-in"
-      >Ver el programa de fiestas</a
-    >
   </section>
-  <section
-    class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 w-full max-w-2xl lg:max-w-5xl mx-auto"
-  >
-    <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
-      <span class="relative">
-        <!-- <span
+  <section class="w-full">
+    <article
+      class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 max-w-2xl lg:max-w-5xl mx-auto"
+    >
+      <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
+        <span class="relative">
+          <!-- <span
           class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-blue-300"
         ></span> -->
-        <span class="relative">Próximos eventos</span>
-      </span>
-    </h3>
-    <article class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 w-full">
-      {
-        eventsList.map((event) => {
-          return <EventCard event={event} />;
-        })
-      }
+          <span class="relative">Próximos eventos</span>
+        </span>
+      </h3>
+      <article class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 w-full">
+        {
+          eventsList.map((event) => {
+            return <EventCard event={event} />;
+          })
+        }
+      </article>
+      <BaseLink
+        link="/eventos"
+        extraClasses="bg-blue-300"
+        text="Ver todos los eventos"
+      />
+      <!-- <a
+        href="/eventos"
+        class="py-3 px-4 text-lg bg-blue-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
+        >Ver todos los eventos</a
+      > -->
     </article>
-    <a
-      href="/eventos"
-      class="py-3 px-4 text-lg bg-black text-background text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 duration-100 ease-in"
-      >Ver todos los eventos</a
-    >
   </section>
 </BaseLayout>

@@ -1,4 +1,5 @@
 ---
+import BaseLink from './BaseLink.astro';
 import { Image } from 'astro:assets';
 const { event } = Astro.props;
 ---
@@ -7,12 +8,7 @@ const { event } = Astro.props;
   <h3
     class="font-space font-medium tracking-tight text-4xl lg:text-6xl text-center"
   >
-    <span class="relative">
-      <!-- <span
-        class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-red-300"
-      ></span> -->
-      <span class="relative">{event.title}</span>
-    </span>
+    {event.title}
   </h3>
   <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 gap-x-12 gap-y-8">
     <div
@@ -35,22 +31,18 @@ const { event } = Astro.props;
       />
     </section>
   </div>
-  {
-    event.internLinkUrl ? (
-      <a
-        href={event.nternLinkUrl}
-        class="py-3 px-4 text-lg bg-black text-background text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 duration-100 ease-in"
-      >
-        {event.linkText}
-      </a>
-    ) : (
-      <a
-        href={event.externalLinkUrl}
-        target="_blank"
-        class="py-3 px-4 text-lg bg-black text-background text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 duration-100 ease-in"
-      >
-        {event.linkText}
-      </a>
-    )
-  }
+
+  <BaseLink
+    link={event.externalLinkUrl}
+    extraClasses="bg-red-300"
+    text={event.linkText}
+    target={event.externalLinkUrl ? '_target' : '_self'}
+  />
+  <!-- // <a
+      //   href={event.externalLinkUrl}
+      //   target="_blank"
+      //   class="py-3 px-4 text-lg bg-red-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
+      // >
+      //   {event.linkText}
+      // </a> -->
 </article>

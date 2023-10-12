@@ -1,0 +1,26 @@
+---
+const { link, extraClasses, text, target } = Astro.props;
+---
+
+<a
+  href={link}
+  class:list={[
+    'py-3 px-4 text-lg text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded flex items-center gap-x-2',
+    extraClasses
+  ]}
+  target={target}
+>
+  <span>{text}</span>
+  <svg
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="w-6 h-6"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+  </svg>
+</a>
