@@ -34,22 +34,29 @@
 </aside>
 
 <script>
-  const listOfLinks = [...document.querySelectorAll('#sideMenuLinksList a')];
-  const sideMenu = document.querySelector('#sideMenu') as HTMLElement;
-  const bodyContainer = document.querySelector('body') as HTMLElement;
-  const closeButton = document.querySelector('#closeSideMenuButton');
+  function closeButton() {
+    const sideMenu = document.querySelector('#sideMenu') as HTMLElement;
+    const bodyContainer = document.querySelector('body') as HTMLElement;
+    const closeButton = document.querySelector('#closeSideMenuButton');
 
-  listOfLinks.forEach((link) =>
-    link.addEventListener('click', () => {
+    closeButton.addEventListener('click', () => {
       sideMenu.style.display = 'none';
       bodyContainer.style.overflowY = null;
-    })
-  );
+    });
+    const listOfLinks = [...document.querySelectorAll('#sideMenuLinksList a')];
 
-  closeButton.addEventListener('click', () => {
-    sideMenu.style.display = 'none';
-    bodyContainer.style.overflowY = null;
-  });
+    listOfLinks.forEach((link) =>
+      link.addEventListener('click', () => {
+        sideMenu.style.display = 'none';
+        bodyContainer.style.overflowY = null;
+      })
+    );
+  }
+
+  closeButton();
+
+  // Runs on view transitions navigation
+  document.addEventListener('astro:after-swap', closeButton);
 </script>
 <style>
   .blur-in {

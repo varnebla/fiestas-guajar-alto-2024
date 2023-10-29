@@ -1,8 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLink from '../components/BaseLink.astro';
 ---
 
 <BaseLayout>
-  Parece que te has perdido
-  <a href="/">Vuelve al inicio</a>
+  <section class="pt-8 max-w-xl mx-auto flex flex-col items-center gap-y-4">
+    <p>Parece que te has perdido</p>
+    <BaseLink link="/" text="Volver al inicio" />
+  </section>
 </BaseLayout>

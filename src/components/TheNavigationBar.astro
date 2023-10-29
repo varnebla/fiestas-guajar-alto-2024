@@ -1,11 +1,10 @@
 ---
-function navbarClick() {
-  console.log('hola que tal');
-}
+
 ---
 
 <header
   class="fixed top-0 left-0 right-0 flex justify-between px-8 py-4 text-2xl border-b-2 border-black z-10 bg-white shadow-md"
+  transition:persist
 >
   <a href="/">GA '24</a>
   <nav class="hidden lg:flex gap-x-12">
@@ -39,14 +38,6 @@ function navbarClick() {
     </svg>
   </button>
 </header>
-
 <script>
-  const openSideMenuButton = document.querySelector('button.navigation-button');
-  const sideMenu = document.querySelector('#sideMenu') as HTMLElement;
-  const bodyContainer = document.querySelector('body') as HTMLElement;
-
-  openSideMenuButton.addEventListener('click', () => {
-    sideMenu.style.display = 'flex';
-    bodyContainer.style.overflowY = 'hidden';
-  });
+  import '../scripts/navigation';
 </script>

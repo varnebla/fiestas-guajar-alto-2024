@@ -1,13 +1,82 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageTitle from '../../components/PageTitle.astro';
+
+import imgSrc1 from '../../assets/farolillos.jpeg';
+import imgSrc2 from '../../assets/fiestas_bg.jpeg';
+import imgSrc3 from '../../assets/sobre-las-fiestas.jpeg';
+import imgSrc4 from '../../assets/mountain-bikw.jpeg';
+
+const imgsCarousel = [imgSrc1, imgSrc2, imgSrc3, imgSrc4];
 ---
 
 <BaseLayout title="El pueblo">
-  <section class="pt-8 lg:pt-10 flex flex-col items-center">
+  <section
+    class="pt-8 lg:pt-10 flex flex-col items-center gap-y-8 max-w-xl mx-auto text-lg"
+  >
     <PageTitle
       title="El pueblo"
       underlineClasses="bottom-2 left-0 -right-4 h-3/5 bg-red-300"
     />
+    <!-- <div
+      class="relative flex flex-wrap w-full snap-mandatory snap-x gap-x-4 max-w-4xl"
+    >
+      {
+        imgsCarousel.map((img) => {
+          return (
+            // <div class="w-full sticky left-0 snap-center overflow-hidden">
+            <Image
+              src={img}
+              width={620}
+              height={350}
+              alt="image"
+              class="object-cover w-full max-w-sm snap-center aspect-video"
+            />
+            // </div>
+          );
+        })
+      } 
+    </div> -->
+    <article class="flex flex-col gap-y-4">
+      <p>
+        Guájar Alto es un encantador pueblo ubicado en la provincia de Granada,
+        en la comunidad autónoma de Andalucía, España. Este rincón andaluz es
+        conocido por su belleza natural subtropical, su rica herencia cultural y
+        su deliciosa gastronomía.
+      </p>
+      <!-- TODO - imágenes de pueblo aquí -->
+      <p>
+        El pueblo se encuentra rodeado de impresionantes paisajes montañosos.
+        Los amantes de la naturaleza pueden disfrutar de numerosas rutas de
+        senderismo que ofrecen vistas panorámicas de la región, como el Pico de
+        las Tres Lindes, y maravillosos paisajes escarpados con barrancos y el
+        río de la Toba. Estas caminatas son ideales para explorar la flora y
+        fauna locales.
+      </p>
+      <p>
+        Puedes pasear por sus calles y admirar la arquitectura tradicional
+        andaluza, de pasado morisco. Encontrarás en ellas lugares como las
+        fuentes de tres caños, de las que emana agua fresca durante todo el año,
+        calles pintorescas como la Peana o el Portón y la iglesia de la
+        Encarnación.
+      </p>
+      <p>
+        La gastronomía de Guájar Alto es deliciosa y refleja la rica tradición
+        culinaria de Granada. Algunos platos y productos típicos de la zona
+        incluyen:
+      </p>
+      <ul class="block w-full">
+        <li>- Tapas</li>
+        <li>- Migas</li>
+        <li>- Papas a lo pobre</li>
+      </ul>
+      <p>
+        Además, la región de la Costa Tropical de Granada, dónde se encuentra el
+        pueblo, es famosa por sus frutas tropicales, como mangos, aguacates y
+        chirimoyas. Asegúrate de probar estas delicias frescas mientras estés
+        aquí.
+      </p>
+    </article>
   </section>
 </BaseLayout>
