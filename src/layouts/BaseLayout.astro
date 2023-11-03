@@ -9,20 +9,40 @@ import '@fontsource-variable/space-grotesk';
 import '@fontsource/dm-sans/400.css';
 import '@fontsource/dm-sans/700.css';
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
-<html lang="en" class="h-full">
+<html lang="es" class="h-full">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/ga24.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Fiestas Guájar Alto 2024</title>
+    <meta name="description" content={description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://fiestasguajaralto2024.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta
-      name="description"
-      content="Descubre las emocionantes Fiestas Patronales de Guájar Alto en 2024, un evento lleno de tradición, devoción y diversión. Información sobre las fechas, actividades, el pueblo, gastronomía y mucho más. ¡Únete a la celebración y experimenta la magia de Guájar Alto en estas festividades únicas en su clase!"
+      property="og:image"
+      content="https://fiestasguajaralto2024.com/fiestas-guajar-alto-2024.png"
     />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="fiestasguajaralto2024.com" />
+    <meta property="twitter:url" content="https://fiestasguajaralto2024.com" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content="https://fiestasguajaralto2024.com/fiestas-guajar-alto-2024.png"
+    />
+
     <ViewTransitions />
   </head>
   <body class="h-full bg-white min-h-[100dvh]">

@@ -12,9 +12,11 @@ import aboutFiestasSrc from '../assets/sobre-las-fiestas-cervezas.jpeg';
 
 const eventsList = getNextEvents({ limit: 3 });
 const highlightedEvent = getHighlightedEvent();
+const pageDescription =
+  'Fiestas Patronales de Guájar Alto 2024: Tradición, devoción y diversión. ¡Descubre la magia de este evento único!';
 ---
 
-<BaseLayout title="Inicio">
+<BaseLayout title="Inicio" description={pageDescription}>
   <section
     class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 py-8 lg:pt-20 lg:pb-24 lg:px-8"
   >
@@ -90,12 +92,12 @@ const highlightedEvent = getHighlightedEvent();
           class="flex flex-1 flex-col justify-start lg:justify-center gap-y-4 text-xl"
         >
           <p>
-            ¡Bienvenidos a las fiestas patronales de Guájar Alto! Estas
-            celebraciones, que tienen lugar del <strong
-              >14 al 16 de agosto</strong
-            >, son un vibrante homenaje a la Virgen de la Aurora, patrona de
-            nuestro pueblo. Durante tres días repletos de alegría y devoción,
-            Guájar Alto se llena de vida y color.
+            ¡Bienvenidos a las fiestas patronales de Guájar Alto, en Los
+            Guájares, en la Costa Tropical de Granada! Estas celebraciones, que
+            tienen lugar del <strong>14 al 16 de agosto</strong>, son un
+            vibrante homenaje a la Virgen de la Aurora, patrona de nuestro
+            pueblo. Durante tres días repletos de alegría y devoción, Guájar
+            Alto se llena de vida y color.
           </p>
           <p>
             Los visitantes podrán deleitarse con una <strong
