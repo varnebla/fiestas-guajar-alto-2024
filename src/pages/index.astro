@@ -1,95 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EventCard from '../components/EventCard.astro';
-import HighlightedEventSection from '../components/HighlightedEventSection.astro';
 import BaseLink from '../components/BaseLink.astro';
+import HeroSection from '../components/HeroSection.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import PuebloSection from '../components/PuebloSection.astro';
+// import HighlightedEventSection from '../components/HighlightedEventSection.astro';
 
 import { getNextEvents, getHighlightedEvent } from '../services/eventos';
 
 import { Image } from 'astro:assets';
-import bgImageSrc from '../assets/fiestas_bg.jpeg';
-import aboutFiestasSrc from '../assets/sobre-las-fiestas-cervezas.jpeg';
+import aboutFiestasSrc from '../assets/cohetes.jpeg';
 
 const eventsList = getNextEvents({ limit: 3 });
-const highlightedEvent = getHighlightedEvent();
+// const highlightedEvent = getHighlightedEvent();
 const pageDescription =
   'Fiestas Patronales de Guájar Alto 2024: Tradición, devoción y diversión. ¡Descubre la magia de este evento único!';
 ---
 
 <BaseLayout title="Inicio" description={pageDescription}>
-  <section
-    class="h-auto w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-rows-2 gap-y-8 lg:gap-y-0 gap-x-8 py-8 lg:pt-20 lg:pb-24 lg:px-8"
-  >
-    <div
-      class="flex flex-col justify-start items-center lg:items-start row-span-1 lg:col-span-1"
-    >
-      <h1
-        class="font-space text-5xl sm:text-7xl xl:text-8xl uppercase tracking-wide leading-none text-center lg:text-left"
-      >
-        <span class="relative">
-          <span
-            class="block absolute bottom-6 -left-1 -right-4 h-2/3 skew-y-1 bg-yellow-200"
-          ></span>
-          <span class="relative">Fiestas</span>
-        </span>
-        <br />
-        <span class="relative">
-          <span
-            class="block absolute bottom-2 left-2 right-2 h-2/3 -skew-y-1 bg-yellow-200"
-          ></span>
-          <span class="relative">Patronales</span>
-        </span>
-        <br />
-        <span class="relative">
-          <span
-            class="block absolute bottom-0 -left-1 -right-1 h-2/3 -skew-y-2 bg-yellow-200"
-          ></span>
-          <span class="relative">2024</span>
-        </span>
-      </h1>
-    </div>
-    <div class="flex flex-col justify-center row-span-1 lg:justify-end">
-      <h2
-        class="font-space text-3xl sm:text-5xl uppercase text-center lg:text-left"
-      >
-        <span>14 - 16 Agosto</span>
-        <br />
-        <span>Guájar Alto</span>
-      </h2>
-    </div>
-    <div
-      class="lg:row-span-2 bg-yellow-200 h-64 lg:h-auto max-w-xl lg:ml-auto w-full mx-auto overflow-hidden aspect-video lg:aspect-square border-2 border-black"
-    >
-      <Image
-        src={bgImageSrc}
-        alt="Fiestas"
-        width={620}
-        height={300}
-        fetchpriority="high"
-        class="object-cover lg:w-full"
-      />
-    </div>
-  </section>
+  <HeroSection />
   <!-- <section class="w-full">
     <article class="max-w-2xl lg:max-w-5xl mx-auto">
       <HighlightedEventSection event={highlightedEvent} />
     </article>
   </section> -->
-  <section class="w-full">
-    <article
-      class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 max-w-2xl lg:max-w-5xl mx-auto"
+  <section class="w-full bg-gray-10 py-12">
+    <div
+      class="flex flex-col items-center gap-y-8 lg:gap-y-12 max-w-2xl lg:max-w-5xl mx-auto"
     >
-      <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
-        <span class="relative">
-          <!-- <span
-          class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-green-300"
-        ></span> -->
-          <span class="relative">Sobre las fiestas</span>
-        </span>
-      </h3>
-      <section class="flex flex-col-reverse lg:flex-row gap-x-12 gap-y-8">
+      <SectionTitle title="¡Vive las fiestas!" />
+      <article class="flex flex-col-reverse lg:flex-row gap-x-12 gap-y-8">
         <div
-          class="flex flex-1 flex-col justify-start lg:justify-center gap-y-4 text-xl"
+          class="flex flex-1 flex-col justify-start lg:justify-center gap-y-4 text-lg"
         >
           <p>
             ¡Bienvenidos a las fiestas patronales de Guájar Alto, en Los
@@ -100,19 +43,12 @@ const pageDescription =
             Alto se llena de vida y color.
           </p>
           <p>
-            Los visitantes podrán deleitarse con una <strong
-              >gran variedad de eventos culturales y actividades</strong
-            > para todas las edades. Conciertos en vivo, competiciones
-            deportivas y degustaciones de nuestra gastronomía son algunas de
-            ellas.
-          </p>
-          <p>
             Únete a nosotros para celebrar con pasión las fiestas patronales de
             Guájar Alto. ¡Te esperamos con los brazos abiertos!
           </p>
         </div>
         <div
-          class="flex-1 border-2 border-black w-full overflow-hidden aspect-video lg:aspect-square"
+          class="flex-1 w-full overflow-hidden aspect-video lg:aspect-square shadow-md rounded-2xl"
         >
           <Image
             src={aboutFiestasSrc}
@@ -123,31 +59,27 @@ const pageDescription =
             class="object-cover w-full"
           />
         </div>
-      </section>
+      </article>
       <BaseLink
         link="/fiestas"
         extraClasses="bg-yellow-200"
         text="Ver el programa de fiestas"
       />
-      <!-- <a
+    </div>
+    <!-- <a
         href="/fiestas"
         class="py-3 px-4 text-lg bg-green-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
         >Ver el programa de fiestas</a
       > -->
-    </article>
   </section>
-  <section class="w-full">
+  <section class="w-full bg-brown-90 py-12 text-white">
+    <PuebloSection />
+  </section>
+  <section class="w-full bg-gray-20 py-12">
     <article
-      class="flex flex-col items-center gap-y-8 lg:gap-y-12 py-12 max-w-2xl lg:max-w-5xl mx-auto"
+      class="flex flex-col items-center gap-y-8 lg:gap-y-12 max-w-2xl lg:max-w-5xl mx-auto"
     >
-      <h3 class="font-space font-medium tracking-tight text-4xl lg:text-6xl">
-        <span class="relative">
-          <!-- <span
-          class="block absolute bottom-0 -left-1 -right-1 h-1/2 -skew-y-1 bg-blue-300"
-        ></span> -->
-          <span class="relative">Próximos eventos</span>
-        </span>
-      </h3>
+      <SectionTitle title="Próximos eventos" />
       <article class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 w-full">
         {
           eventsList.map((event) => {
@@ -161,10 +93,10 @@ const pageDescription =
         text="Ver todos los eventos"
       />
       <!-- <a
-        href="/eventos"
-        class="py-3 px-4 text-lg bg-blue-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
-        >Ver todos los eventos</a
-      > -->
+          href="/eventos"
+          class="py-3 px-4 text-lg bg-blue-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
+          >Ver todos los eventos</a
+        > -->
     </article>
   </section>
 </BaseLayout>

@@ -4,10 +4,8 @@ import TheNavigationBar from '../components/TheNavigationBar.astro';
 import TheFooter from '../components/TheFooter.astro';
 import AsideMenu from '../components/AsideMenu.astro';
 
-import '@fontsource/anton';
-import '@fontsource-variable/space-grotesk';
-import '@fontsource/dm-sans/400.css';
-import '@fontsource/dm-sans/700.css';
+import '@fontsource-variable/red-hat-display';
+import '@fontsource-variable/work-sans';
 
 const { title, description } = Astro.props;
 ---
@@ -25,7 +23,7 @@ const { title, description } = Astro.props;
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://fiestasguajaralto2024.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content=`${title} | Fiestas Guájar Alto 2024` />
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
@@ -36,7 +34,7 @@ const { title, description } = Astro.props;
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="fiestasguajaralto2024.com" />
     <meta property="twitter:url" content="https://fiestasguajaralto2024.com" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content=`${title} | Fiestas Guájar Alto 2024` />
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
@@ -47,7 +45,7 @@ const { title, description } = Astro.props;
   </head>
   <body class="h-full bg-white min-h-[100dvh]">
     <TheNavigationBar />
-    <main class="min-h-full w-full flex flex-col px-4 py-20 lg:px-0">
+    <main class="min-h-full w-full flex flex-col">
       <slot />
     </main>
     <AsideMenu />
