@@ -23,7 +23,9 @@ const event = getEventBySlug(slug);
   <section
     class="flex flex-col items-center gap-y-8 max-w-5xl mx-auto pb-16 md:py-24"
   >
-    <div class="w-full aspect-video overflow-hidden md:rounded-2xl relative">
+    <div
+      class="w-full aspect-[14/9] sm:aspect-video overflow-hidden md:rounded-2xl relative"
+    >
       <Image
         src={event.thumbnail}
         alt={event.name}

@@ -62,7 +62,7 @@
     "name": "Cabalgata de Reyes",
     "thumbnail": "cabalgata.jpg",
     "abstract": "La Cabalgata de Reyes en Guájar Alto es más que un evento",
-    "description": "<p>Guájar Alto se prepara para recibir la esperada Cabalgata de Reyes, un evento que trae consigo la magia y la ilusión característica de la temporada. El 5 de enero, las calles de nuestro encantador pueblo se llenarán de alegría y emoción mientras sus Majestades los Reyes Magos desfilan en un espectáculo lleno de color y música.</p><p>La cabalgata, que ha sido cuidadosamente preparada para deleitar a grandes y pequeños, contará con carrozas decoradas de manera espectacular, personajes entrañables y, por supuesto, la participación de los tres Reyes Magos, quienes repartirán caramelos y buenos deseos a lo largo del recorrido.</p><p>El desfile culminará en la Plaza Mayor, donde se llevará a cabo la entrega de regalos y se realizarán actividades festivas para continuar con la celebración. Este evento anual no solo es una tradición arraigada en nuestra comunidad, sino también una oportunidad para unirnos como pueblo y compartir la magia de la temporada navideña.</p><p>¡Te invitamos a unirte a nosotros y ser parte de este día lleno de emociones! La Cabalgata de Reyes en Guájar Alto es más que un evento; es una experiencia única que crea recuerdos imborrables para todos. ¡No te lo pierdas!</p>",
+    "description": "<p>Guájar Alto se prepara para recibir la esperada Cabalgata de Reyes, un evento que trae consigo la magia y la ilusión característica de la temporada. El 5 de enero, las calles de nuestro encantador pueblo se llenarán de alegría y emoción mientras sus Majestades los Reyes Magos desfilan en un espectáculo lleno de color y música.</p><p>La cabalgata, que ha sido cuidadosamente preparada para deleitar a grandes y pequeños, contará con carrozas decoradas de manera espectacular, personajes entrañables y, por supuesto, la participación de los tres Reyes Magos, quienes repartirán caramelos y buenos deseos a lo largo del recorrido.</p><p>¡Te invitamos a unirte a nosotros y ser parte de este día lleno de emociones! La Cabalgata de Reyes en Guájar Alto es más que un evento; es una experiencia única que crea recuerdos imborrables para todos. ¡No te lo pierdas!</p>",
     "date": "2024/01/05",
     "location": "Escuelas, Guájar Alto",
     "sponsors": [
@@ -74,29 +74,5 @@
     ],
     "album": [],
     "highlighted": null
-  },
-  {
-    "id": 5,
-    "slug": "guajar-extreme",
-    "name": "Guájar Extreme",
-    "thumbnail": "guajar-extreme.webp",
-    "description": "<p>El 19 de febrero se celebrará en Guájar Alto la sexta edición de Guájar Extreme, una emocionante competición de mountain bike que te llevará a explorar los montes majestuosos de la Costa Tropical. Esta cita promete emociones fuertes y una experiencia única para los amantes del ciclismo de montaña.</p><p>El punto de partida será el pueblo de Guájar Alto a las 9:30h, desde donde los participantes se embarcarán en una jornada de desafío y aventura. Descubre la belleza natural de nuestra región mientras recorres senderos desafiantes y disfrutas de las espectaculares vistas que solo los montes de la Costa Tropical pueden ofrecer.</p><p>Pero la diversión no termina con la competición. Al concluir la prueba, todos los participantes y espectadores están invitados a una paella popular en la que podrán relajarse, compartir historias y disfrutar del ambiente festivo. </p><p>¡No lo pienses más, las plazas son limitadas a 250 participantes!</p><br/><p><strong>Información sobre la prueba:</strong></p><p>Inscripciones abiertas hasta el 17/02 a las 12h</p><p>Recogida de dorsales en Decathlon Motril (Vie 18/02 de 18h a 20h y Sáb 19/02 de 11h a 14h y de 18h a 20h)</p><br/><p><strong>Precios:</strong></p><ul><p>- 20€ hasta el 19/12</p><p>- 23€ desde el 20/12 hasta el 19/01/24</p><p>- 25€ a partir del 20/01</p>",
-    "date": "2024/02/19",
-    "location": "Guájar Alto",
-    "sponsors": [
-      {
-        "id": 0,
-        "name": "",
-        "link": ""
-      }
-    ],
-    "album": [],
-    "highlighted": {
-      "title": "¡Apúntate a la Guájar Extreme!",
-      "short_description": "<p>Disfruta de una jornada de ciclismo de montaña en Guájar Alto. Guájar Extreme es una marcha competitiva limitada a <strong>250 participantes</strong> en los que se podremos disfrutar de bellos paisajes de montaña y la Costa Tropical.</p><p>El recorrido es de <strong>46km</strong> y contará con un desnivel de <strong>1700m</strong>.</p><p>Al finalizar la competición, se celebrará una paella popular en el pueblo a la que los participantes serán invitados. </p>",
-      "link_text": "¡Quiero apuntarme!",
-      "extern_link_url": "http://global-tempo.com/carreras.php?id=1959",
-      "intern_link_url": null
-    }
   }
 ]
