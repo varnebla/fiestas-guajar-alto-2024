@@ -1,12 +1,9 @@
 ---
-const { title, underlineClasses } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <h1
-  class="font-space font-medium text-5xl sm:text-7xl leading-none text-center tracking-tight"
+  class="font-red-hat font-bold text-5xl sm:text-7xl leading-none text-center tracking-tight"
 >
-  <span class="relative">
-    <span class:list={['block absolute', underlineClasses]}></span>
-    <span class="relative">{title}</span>
-  </span>
+  {title}
 </h1>

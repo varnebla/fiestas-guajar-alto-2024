@@ -21,21 +21,30 @@ const event = getEventBySlug(slug);
 
 <BaseLayout title={event.name}>
   <section
-    class="flex flex-col items-center gap-y-8 max-w-5xl mx-auto pt-8 lg:pt-10"
+    class="flex flex-col items-center gap-y-8 max-w-5xl mx-auto pb-16 md:py-24"
   >
-    <PageTitle title={event.name} />
-    <div class="w-full aspect-video overflow-hidden">
+    <div class="w-full aspect-video overflow-hidden md:rounded-2xl relative">
       <Image
         src={event.thumbnail}
         alt={event.name}
-        width={576}
+        width={768}
         height={300}
-        class="border-2 border-black object-cover w-full"
+        class="object-cover w-full"
       />
+      <div
+        class="absolute inset-0 flex flex-col justify-end text-xl w-full text-white bg-gradient-to-t from-black/60 via-semitransparent to-transparent px-4 py-4 md:px-6"
+      >
+        <p>{event.date}</p>
+        <h1
+          class="font-medium text-5xl sm:text-7xl leading-none tracking-tight"
+        >
+          {event.name}
+        </h1>
+      </div>
     </div>
     <div
       set:html={event.description}
-      class="max-w-xl mx-auto text-xl [&_p]:mb-4"
+      class="max-w-3xl mx-auto text-lg [&_p]:mb-4 px-4 md:px-0"
     />
   </section>
 </BaseLayout>

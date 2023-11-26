@@ -1,0 +1,22 @@
+---
+import SectionTitle from './SectionTitle.astro';
+import ImageCarousel from './ImageCarousel.astro';
+import EventCard from './EventCard.astro';
+import BaseLink from './BaseLink.astro';
+
+import { getNextEvents } from '../services/eventos';
+
+const eventsList = getNextEvents({ limit: 3 });
+---
+
+<article class="flex flex-col items-center gap-y-8 max-w-5xl mx-auto">
+  <SectionTitle title="Próximos eventos" />
+  <ImageCarousel>
+    {
+      eventsList.map((event) => {
+        return <EventCard event={event} />;
+      })
+    }
+  </ImageCarousel>
+  <BaseLink link="/eventos" text="Ver todos los eventos" />
+</article>

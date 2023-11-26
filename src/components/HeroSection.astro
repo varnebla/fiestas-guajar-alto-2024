@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import bgImageSrc from '../assets/fiestas_bg.jpg';
+---
+
+<section>
+  <Image
+    src={bgImageSrc}
+    alt="Fiestas"
+    width={1440}
+    height={783}
+    fetchpriority="high"
+    class="w-full relative h-[100dvh] object-cover"
+  />
+  <article
+    class="h-[100dvh] w-full flex flex-col items-center justify-center pt-20 gap-y-12 absolute inset-0 backdrop-brightness-75 bg-gradient-to-r from-hero-background to-transparent"
+  >
+    <div
+      class="flex flex-col justify-start items-center lg:items-start row-span-1 lg:col-span-1"
+    >
+      <h1
+        class="font-red-hat font-bold text-5xl sm:text-7xl xl:text-8xl tracking-wide leading-none text-center text-white"
+      >
+        <span>Fiestas patronales</span>
+        <br />
+        <span>Guájar Alto</span>
+      </h1>
+    </div>
+    <div class="bg-semi-transparent px-4 py-3 rounded-lg backdrop-blur-sm">
+      <h2
+        class="font-sans text-2xl sm:text-3xl text-center lg:text-left text-white"
+      >
+        14 - 16 de agosto del 2024
+      </h2>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import SectionTitle from './SectionTitle.astro';
+import BaseLink from './BaseLink.astro';
+import ImageCarousel from './ImageCarousel.astro';
+
+import descubreArquitecturaPic from '../assets/descubre/descubre_arquitectura.webp';
+import descubreNaturalezaPic from '../assets/descubre/descubre_naturaleza.webp';
+import descubreActividadesPic from '../assets/descubre/descubre_actividades.webp';
+import descubreGastronomiaPic from '../assets/descubre/descubre_gastronomia.webp';
+---
+
+<article class="flex flex-col items-center gap-y-8 max-w-5xl mx-auto text-lg">
+  <SectionTitle title="Descubre el pueblo" />
+  <p class="max-w-2xl px-4">
+    Bienvenido a Guájar Alto, un hermoso pueblo en la provincia de Granada,
+    Andalucía, que te invita a explorar su belleza natural, su rica herencia
+    cultural y su exquisita gastronomía
+  </p>
+  <ImageCarousel>
+    <div
+      class="min-w-[190px] aspect-square bg-red-200 relative text-white rounded-2xl snap-center overflow-hidden shadow"
+    >
+      <Image
+        src={descubreArquitecturaPic}
+        alt="Descubre la arquitectura"
+        width={220}
+        height={220}
+        class="object-cover aspect-square"
+      />
+      <div
+        class="aspect-square bg-gradient-to-t from-[rgb(38,33,23,80%)] to-transparent via-transparent inset-0 absolute flex flex-col items-center justify-end p-4"
+      >
+        <p>Arquitectura</p>
+      </div>
+    </div>
+    <div
+      class="min-w-[190px] aspect-square bg-red-200 relative text-white rounded-2xl snap-center overflow-hidden shadow"
+    >
+      <Image
+        src={descubreActividadesPic}
+        alt="Descubre las actividades"
+        width={220}
+        height={220}
+        class="object-cover aspect-square"
+      />
+      <div
+        class="aspect-square bg-gradient-to-t from-[rgb(38,33,23,80%)] to-transparent via-transparent inset-0 absolute flex flex-col items-center justify-end p-4"
+      >
+        <p>Actividades</p>
+      </div>
+    </div>
+    <div
+      class="min-w-[190px] aspect-square bg-red-200 relative text-white rounded-2xl snap-center overflow-hidden shadow"
+    >
+      <Image
+        src={descubreNaturalezaPic}
+        alt="Descubre la naturaleza"
+        width={220}
+        height={220}
+        class="object-cover aspect-square"
+      />
+      <div
+        class="aspect-square bg-gradient-to-t from-[rgb(38,33,23,80%)] to-transparent via-transparent inset-0 absolute flex flex-col items-center justify-end p-4"
+      >
+        <p>Naturaleza</p>
+      </div>
+    </div>
+    <div
+      class="min-w-[190px] aspect-square bg-red-200 relative text-white rounded-2xl snap-center overflow-hidden shadow"
+    >
+      <Image
+        src={descubreGastronomiaPic}
+        alt="Descubre la gastronomía"
+        width={220}
+        height={220}
+        class="object-cover aspect-square"
+      />
+      <div
+        class="aspect-square bg-gradient-to-t from-[rgb(38,33,23,80%)] to-transparent via-transparent inset-0 absolute flex flex-col items-center justify-end p-4"
+      >
+        <p>Gastronomía</p>
+      </div>
+    </div>
+  </ImageCarousel>
+  <BaseLink
+    link="/pueblo"
+    extraClasses="!bg-white !text-brown-90"
+    text="Descubrir más"
+  />
+</article>
