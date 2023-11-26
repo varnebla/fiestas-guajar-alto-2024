@@ -5,27 +5,26 @@ const { event } = Astro.props;
 
 <a
   href={`eventos/${event.slug}`}
-  class="border-2 border-black hover:shadow-md group rounded"
+  class="hover:shadow-md group rounded-2xl overflow-hidden min-w-[300px] aspect-[10/13] snap-center relative shrink-0"
 >
-  <div class="w-full max-h-[250px] bg-white overflow-hidden">
-    <Image
-      src={event.thumbnail}
-      alt={event.name}
-      width={420}
-      height={120}
-      class="object-cover group-hover:scale-[1.025] transition-transform duration-300 delay-75 w-full"
-    />
-  </div>
-
-  <footer
-    class="flex flex-col text-xl bg-white p-4 w-full border-t-2 border-black gap-y-4"
+  <!-- <div class="w-full h-full bg-white overflow-hidden"> -->
+  <Image
+    src={event.thumbnail}
+    alt={event.name}
+    width={294}
+    height={388}
+    class="object-cover group-hover:scale-[1.025] transition-transform duration-300 delay-75 rounded-2xl aspect-[10/13] w-full"
+  />
+  <div
+    class="absolute inset-0 flex flex-col justify-end text-xl w-full text-white gap-y-4 bg-gradient-to-t from-black/60 via-semitransparent to-transparent px-6 py-4"
   >
-    <div>
-      <p class="text-sm">{event.date}</p>
-      <p class="font-bold">{event.name}</p>
+    <div class="flex flex-col gap-y-2">
+      <p class="text-base">{event.date}</p>
+      <p class="text-lg font-bold">{event.name}</p>
+      <p class="line-clamp-3 text-ellipsis">{event.abstract}</p>
     </div>
     <div
-      class="flex items-center gap-x-1 w-max rounded underline font-medium text-base hover:bg-opacity-80"
+      class="self-end flex items-center gap-x-1 w-max font-medium text-base px-3 py-2 bg-semi-transparent rounded-lg backdrop-blur-sm"
     >
       <span>Leer más</span>
       <svg
@@ -39,8 +38,8 @@ const { event } = Astro.props;
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+          d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
       </svg>
     </div>
-  </footer>
+  </div>
 </a>

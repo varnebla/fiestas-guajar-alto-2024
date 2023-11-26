@@ -1,19 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import EventCard from '../components/EventCard.astro';
 import BaseLink from '../components/BaseLink.astro';
 import HeroSection from '../components/HeroSection.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import PuebloSection from '../components/PuebloSection.astro';
-// import HighlightedEventSection from '../components/HighlightedEventSection.astro';
-
-import { getNextEvents, getHighlightedEvent } from '../services/eventos';
+import EventsSection from '../components/EventsSection.astro';
 
 import { Image } from 'astro:assets';
 import aboutFiestasSrc from '../assets/cohetes.jpeg';
 
-const eventsList = getNextEvents({ limit: 3 });
-// const highlightedEvent = getHighlightedEvent();
 const pageDescription =
   'Fiestas Patronales de Guájar Alto 2024: Tradición, devoción y diversión. ¡Descubre la magia de este evento único!';
 ---
@@ -27,7 +22,7 @@ const pageDescription =
   </section> -->
   <section class="w-full bg-gray-10 py-12">
     <div
-      class="flex flex-col items-center gap-y-8 lg:gap-y-12 max-w-2xl lg:max-w-5xl mx-auto"
+      class="flex flex-col items-center gap-y-8 lg:gap-y-12 max-w-2xl lg:max-w-5xl mx-auto px-4"
     >
       <SectionTitle title="¡Vive las fiestas!" />
       <article class="flex flex-col-reverse lg:flex-row gap-x-12 gap-y-8">
@@ -60,43 +55,13 @@ const pageDescription =
           />
         </div>
       </article>
-      <BaseLink
-        link="/fiestas"
-        extraClasses="bg-yellow-200"
-        text="Ver el programa de fiestas"
-      />
+      <BaseLink link="/fiestas" text="Ver el programa de fiestas" />
     </div>
-    <!-- <a
-        href="/fiestas"
-        class="py-3 px-4 text-lg bg-green-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
-        >Ver el programa de fiestas</a
-      > -->
   </section>
   <section class="w-full bg-brown-90 py-12 text-white">
     <PuebloSection />
   </section>
   <section class="w-full bg-gray-20 py-12">
-    <article
-      class="flex flex-col items-center gap-y-8 lg:gap-y-12 max-w-2xl lg:max-w-5xl mx-auto"
-    >
-      <SectionTitle title="Próximos eventos" />
-      <article class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 w-full">
-        {
-          eventsList.map((event) => {
-            return <EventCard event={event} />;
-          })
-        }
-      </article>
-      <BaseLink
-        link="/eventos"
-        extraClasses="bg-yellow-200"
-        text="Ver todos los eventos"
-      />
-      <!-- <a
-          href="/eventos"
-          class="py-3 px-4 text-lg bg-blue-300 text-black border-2 border-black text-center self-center font-semibold font-space transition-transform hover:-translate-y-0.5 hover:shadow duration-100 ease-in rounded"
-          >Ver todos los eventos</a
-        > -->
-    </article>
+    <EventsSection />
   </section>
 </BaseLayout>

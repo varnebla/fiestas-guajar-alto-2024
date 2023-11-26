@@ -7,7 +7,7 @@ import AsideMenu from '../components/AsideMenu.astro';
 import '@fontsource-variable/red-hat-display';
 import '@fontsource-variable/work-sans';
 
-const { title, description } = Astro.props;
+const { title, description, extraClasses } = Astro.props;
 ---
 
 <html lang="es" class="h-full">
@@ -43,7 +43,7 @@ const { title, description } = Astro.props;
 
     <ViewTransitions />
   </head>
-  <body class="h-full bg-white min-h-[100dvh]">
+  <body class:list={['h-full bg-stone-100 min-h-[100dvh]', extraClasses]}>
     <TheNavigationBar />
     <main class="min-h-full w-full flex flex-col">
       <slot />

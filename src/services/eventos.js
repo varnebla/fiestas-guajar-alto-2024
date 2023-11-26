@@ -1,14 +1,16 @@
 import events from '../data/eventos.json';
 
 import castanyadaPic from '../assets/eventos/castanyas.jpeg';
-import nochebuenaPic from '../assets/eventos/nochebuena.jpeg';
-import nocheviejaPic from '../assets/eventos/nochevieja.jpeg';
+import nochebuenaPic from '../assets/eventos/nochebuena.webp';
+import nocheviejaPic from '../assets/eventos/nochevieja.webp';
+import farolillosPic from '../assets/eventos/cabalgata.jpg';
 import guajarExtremePic from '../assets/eventos/guajar-extreme.webp';
 
 const pictures = {
   castanada: castanyadaPic,
   nochebuena: nochebuenaPic,
   nochevieja: nocheviejaPic,
+  'cabalgata-reyes': farolillosPic,
   'guajar-extreme': guajarExtremePic
 };
 
@@ -21,12 +23,13 @@ export function getNextEvents({ limit } = {}) {
     .sort((prev, next) => new Date(prev.date) - new Date(next.date))
     .slice(0, limit)
     .map((event) => {
-      const { slug, name, date } = event;
+      const { slug, name, date, abstract } = event;
       const formatedDate = formatDate(date);
       return {
         slug,
         name,
         thumbnail: pictures[slug],
+        abstract,
         date: formatedDate
       };
     });

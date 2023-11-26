@@ -3,23 +3,33 @@
 ---
 
 <header
-  class="fixed top-0 left-0 right-0 flex justify-between px-8 py-4 text-2xl border-b-2 border-black z-10 bg-white shadow-md"
+  class="fixed top-[16px] max-w-3xl mx-4 md:mx-auto left-0 right-0 flex justify-between px-8 py-4 text-lg z-10 backdrop-blur-md shadow-md bg-white/60 font-medium rounded-xl"
   transition:persist
 >
-  <a href="/">GA '24</a>
-  <nav class="hidden lg:flex gap-x-12">
-    <a href="/eventos" class="hover:underline decoration-2 underline-offset-2"
+  <a
+    href="/"
+    class="hover:bg-black/10 font-semibold px-3 py-1 rounded-lg transition-colors duration-150"
+    >Guájar Alto 2024</a
+  >
+  <nav class="hidden lg:flex gap-x-4">
+    <a
+      href="/eventos"
+      class="hover:bg-black/10 px-3 py-1 rounded-lg transition-colors duration-150"
       >Eventos</a
     >
-    <a href="/fiestas" class="hover:underline decoration-2 underline-offset-2"
+    <a
+      href="/fiestas"
+      class="hover:bg-black/10 px-3 py-1 rounded-lg transition-colors duration-150"
       >Las fiestas</a
     >
-    <a href="/pueblo" class="hover:underline decoration-2 underline-offset-2"
+    <a
+      href="/pueblo"
+      class="hover:bg-black/10 px-3 py-1 rounded-lg transition-colors duration-150"
       >El pueblo</a
     >
     <!-- <a
       href="/patrocinadores"
-      class="hover:underline decoration-2 underline-offset-2">Patrocinadores</a
+      class="hover:underline ">Patrocinadores</a
     > -->
   </nav>
   <button class="navigation-button lg:hidden"
