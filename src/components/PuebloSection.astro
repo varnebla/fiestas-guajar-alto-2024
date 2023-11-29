@@ -4,10 +4,29 @@ import SectionTitle from './SectionTitle.astro';
 import BaseLink from './BaseLink.astro';
 import ImageCarousel from './ImageCarousel.astro';
 
-import descubreArquitecturaPic from '../assets/descubre/descubre_arquitectura.webp';
+import descubreArquitecturaPic from '../assets/pueblo/plaza-2.webp';
 import descubreNaturalezaPic from '../assets/descubre/descubre_naturaleza.webp';
 import descubreActividadesPic from '../assets/descubre/descubre_actividades.webp';
 import descubreGastronomiaPic from '../assets/descubre/descubre_gastronomia.webp';
+
+const descubreItems = [
+  {
+    title: 'Arquitectura',
+    picture: descubreArquitecturaPic
+  },
+  {
+    title: 'Actividades',
+    picture: descubreActividadesPic
+  },
+  {
+    title: 'Naturaleza',
+    picture: descubreNaturalezaPic
+  },
+  {
+    title: 'Gastronomía',
+    picture: descubreGastronomiaPic
+  }
+];
 ---
 
 <article class="flex flex-col items-center gap-y-8 max-w-5xl mx-auto text-lg">
@@ -18,14 +37,32 @@ import descubreGastronomiaPic from '../assets/descubre/descubre_gastronomia.webp
     cultural y su exquisita gastronomía
   </p>
   <ImageCarousel>
-    <div
+    {
+      descubreItems.map((item) => {
+        return (
+          <div class="min-w-[190px] max-w-[220px] aspect-square bg-red-200 relative text-white rounded-2xl snap-center overflow-hidden shadow">
+            <Image
+              src={item.picture}
+              alt="Descubre la arquitectura"
+              width={260}
+              height={260}
+              class="object-cover aspect-square"
+            />
+            <div class="aspect-square bg-gradient-to-t from-[rgb(38,33,23,80%)] to-transparent via-transparent inset-0 absolute flex flex-col items-center justify-end p-4">
+              <p>{item.title}</p>
+            </div>
+          </div>
+        );
+      })
+    }
+    <!-- <div
       class="min-w-[190px] aspect-square bg-red-200 relative text-white rounded-2xl snap-center overflow-hidden shadow"
     >
       <Image
         src={descubreArquitecturaPic}
         alt="Descubre la arquitectura"
-        width={220}
-        height={220}
+        width={260}
+        height={260}
         class="object-cover aspect-square"
       />
       <div
@@ -81,7 +118,7 @@ import descubreGastronomiaPic from '../assets/descubre/descubre_gastronomia.webp
       >
         <p>Gastronomía</p>
       </div>
-    </div>
+    </div> -->
   </ImageCarousel>
   <BaseLink
     link="/pueblo"

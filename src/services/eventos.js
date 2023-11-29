@@ -3,10 +3,18 @@ import events from '../data/eventos.json';
 import castanyadaPic from '../assets/eventos/castanyas.jpeg';
 import nochebuenaPic from '../assets/eventos/nochebuena.webp';
 import nocheviejaPic from '../assets/eventos/nochevieja.webp';
+import nocheviejaVerticalPic from '../assets/eventos/nochevieja_vertical.jpeg';
 import farolillosPic from '../assets/eventos/cabalgata.jpg';
 import guajarExtremePic from '../assets/eventos/guajar-extreme.webp';
 
-const pictures = {
+const picturesVerticales = {
+  castanada: castanyadaPic,
+  nochebuena: nochebuenaPic,
+  nochevieja: nocheviejaVerticalPic,
+  'cabalgata-reyes': farolillosPic,
+  'guajar-extreme': guajarExtremePic
+};
+const picturesHorizontal = {
   castanada: castanyadaPic,
   nochebuena: nochebuenaPic,
   nochevieja: nocheviejaPic,
@@ -28,7 +36,7 @@ export function getNextEvents({ limit } = {}) {
       return {
         slug,
         name,
-        thumbnail: pictures[slug],
+        thumbnail: picturesVerticales[slug],
         abstract,
         date: formatedDate
       };
@@ -44,7 +52,7 @@ export function getEventBySlug(slug) {
       return {
         slug,
         name,
-        thumbnail: pictures[slug],
+        thumbnail: picturesHorizontal[slug],
         description,
         date: formatedDate,
         location,
@@ -70,7 +78,7 @@ export function getHighlightedEvent() {
 
   return {
     title,
-    thumbnail: pictures[slug],
+    thumbnail: picturesHorizontal[slug],
     shortDescription: short_description,
     linkText: link_text,
     externalLinkUrl: extern_link_url,
