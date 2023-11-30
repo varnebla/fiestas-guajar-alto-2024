@@ -3,12 +3,70 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageTitle from '../../components/PageTitle.astro';
 
-// import imgSrc1 from '../../assets/farolillos.jpeg';
-// import imgSrc2 from '../../assets/fiestas_bg.jpeg';
-// import imgSrc3 from '../../assets/sobre-las-fiestas.jpeg';
-// import imgSrc4 from '../../assets/mountain-bikw.jpeg';
+import puebloPanoramica from '../../assets/pueblo/pueblo-panorámica.webp';
 
-// const imgsCarousel = [imgSrc1, imgSrc2, imgSrc3, imgSrc4];
+import arquitecturaFuente from '../../assets/pueblo/arquitectura-1.webp';
+import arquitecturaMuro from '../../assets/pueblo/arquitectura-2.webp';
+import arquitecturaPeana from '../../assets/pueblo/arquitectura-3.webp';
+import arquitecturaIglesia from '../../assets/pueblo/arquitectura-4.webp';
+import arquitecturaCalles from '../../assets/pueblo/arquitectura-5.webp';
+
+import naturalezaNispero from '../../assets/pueblo/naturaleza-1.webp';
+import naturalezaFlor1 from '../../assets/pueblo/naturaleza-2.webp';
+import naturalezaFlor2 from '../../assets/pueblo/naturaleza-3.webp';
+import naturalezaFlor3 from '../../assets/pueblo/naturaleza-4.webp';
+import naturalezaArbol from '../../assets/pueblo/naturaleza-5.jpg';
+import naturalezaCardo from '../../assets/pueblo/naturaleza-6.webp';
+
+const arquitecturaPictures = [
+  {
+    title: 'Fuente de tres caños de Guájar Alto',
+    picture: arquitecturaFuente
+  },
+  {
+    title: 'Obra de arte urbana en Guájar Alto',
+    picture: arquitecturaMuro
+  },
+  {
+    title: 'Barrio de la Peana de Guájar Alto',
+    picture: arquitecturaPeana
+  },
+  {
+    title: 'Iglesia de Guájar Alto',
+    picture: arquitecturaIglesia
+  },
+  {
+    title: 'Calle de Guájar Alto',
+    picture: arquitecturaCalles
+  }
+];
+
+const naturalezaPictures = [
+  {
+    title: 'Níspero',
+    picture: naturalezaNispero
+  },
+  {
+    title: 'Flor',
+    picture: naturalezaFlor1
+  },
+  {
+    title: 'Flor',
+    picture: naturalezaFlor2
+  },
+  {
+    title: 'Flor',
+    picture: naturalezaFlor3
+  },
+  {
+    title: 'Árbol',
+    picture: naturalezaArbol
+  },
+  {
+    title: 'Cardo',
+    picture: naturalezaCardo
+  }
+];
 ---
 
 <BaseLayout
@@ -22,25 +80,14 @@ import PageTitle from '../../components/PageTitle.astro';
       title="El pueblo"
       underlineClasses="bottom-2 left-0 -right-4 h-3/5 bg-red-300"
     />
-    <!-- <div
-      class="relative flex flex-wrap w-full snap-mandatory snap-x gap-x-4 max-w-4xl"
-    >
-      {
-        imgsCarousel.map((img) => {
-          return (
-            // <div class="w-full sticky left-0 snap-center overflow-hidden">
-            <Image
-              src={img}
-              width={620}
-              height={350}
-              alt="image"
-              class="object-cover w-full max-w-sm snap-center aspect-video"
-            />
-            // </div>
-          );
-        })
-      } 
-    </div> -->
+    <Image
+      src={puebloPanoramica}
+      width={620}
+      height={350}
+      alt="Guájar Alto"
+      class="object-cover w-full aspect-video rounded-2xl shadow"
+    />
+
     <article class="flex flex-col gap-y-4">
       <p>
         Guájar Alto, en Los Guájares, es un encantador pueblo ubicado en la
@@ -48,7 +95,23 @@ import PageTitle from '../../components/PageTitle.astro';
         Este rincón andaluz es conocido por su belleza natural subtropical, su
         rica herencia cultural y su deliciosa gastronomía.
       </p>
-      <!-- TODO - imágenes de pueblo aquí -->
+      <div
+        class="relative flex w-full snap-mandatory snap-x gap-x-4 max-w-4xl overflow-x-scroll"
+      >
+        {
+          arquitecturaPictures.map((img) => {
+            return (
+              <Image
+                src={img.picture}
+                width={620}
+                height={350}
+                alt={img.title}
+                class="object-cover w-full snap-center aspect-video rounded-2xl"
+              />
+            );
+          })
+        }
+      </div>
       <p>
         El pueblo se encuentra rodeado de impresionantes paisajes montañosos.
         Los amantes de la naturaleza pueden disfrutar de numerosas rutas de
@@ -57,6 +120,23 @@ import PageTitle from '../../components/PageTitle.astro';
         río de la Toba. Estas caminatas son ideales para explorar la flora y
         fauna locales.
       </p>
+      <div
+        class="relative flex w-full snap-mandatory snap-x gap-x-4 max-w-4xl overflow-x-scroll"
+      >
+        {
+          naturalezaPictures.map((img) => {
+            return (
+              <Image
+                src={img.picture}
+                width={620}
+                height={350}
+                alt={img.title}
+                class="object-cover w-full snap-center aspect-video rounded-2xl"
+              />
+            );
+          })
+        }
+      </div>
       <p>
         Puedes pasear por sus calles y admirar la arquitectura tradicional
         andaluza, de pasado morisco. Encontrarás en ellas lugares como las
