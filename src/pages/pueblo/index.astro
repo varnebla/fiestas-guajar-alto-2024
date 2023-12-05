@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageTitle from '../../components/PageTitle.astro';
+import FullImageCarousel from '../../components/FullImageCarousel.astro';
 
 import puebloPanoramica from '../../assets/pueblo/pueblo-panorámica.webp';
 
@@ -21,23 +22,28 @@ import naturalezaCardo from '../../assets/pueblo/naturaleza-6.webp';
 const arquitecturaPictures = [
   {
     title: 'Fuente de tres caños de Guájar Alto',
-    picture: arquitecturaFuente
+    picture: arquitecturaFuente,
+    path: ''
   },
   {
     title: 'Obra de arte urbana en Guájar Alto',
-    picture: arquitecturaMuro
+    picture: arquitecturaMuro,
+    path: ''
   },
   {
     title: 'Barrio de la Peana de Guájar Alto',
-    picture: arquitecturaPeana
+    picture: arquitecturaPeana,
+    path: ''
   },
   {
     title: 'Iglesia de Guájar Alto',
-    picture: arquitecturaIglesia
+    picture: arquitecturaIglesia,
+    path: ''
   },
   {
     title: 'Calle de Guájar Alto',
-    picture: arquitecturaCalles
+    picture: arquitecturaCalles,
+    path: ''
   }
 ];
 
@@ -70,48 +76,32 @@ const naturalezaPictures = [
 ---
 
 <BaseLayout
-  title="El pueblo"
+  title="Guájar Alto"
   description="Explora Guájar Alto, en Los Guájares: Historia, cultura y belleza natural en un rincón especial de Granada. ¡Conócenos!"
 >
   <section
-    class="py-28 flex flex-col items-center gap-y-8 max-w-xl mx-auto text-lg px-4"
+    class="py-28 flex flex-col items-center gap-y-8 max-w-2xl mx-auto text-lg px-4"
   >
     <PageTitle
-      title="El pueblo"
+      title="Guájar Alto"
       underlineClasses="bottom-2 left-0 -right-4 h-3/5 bg-red-300"
     />
     <Image
       src={puebloPanoramica}
-      width={620}
+      width={670}
       height={350}
       alt="Guájar Alto"
-      class="object-cover w-full aspect-video rounded-2xl shadow"
+      class="object-cover w-full aspect-video rounded-2xl shadow mb-10"
     />
 
-    <article class="flex flex-col gap-y-4">
+    <article class="flex flex-col gap-y-6">
       <p>
         Guájar Alto, en Los Guájares, es un encantador pueblo ubicado en la
         provincia de Granada, en la comunidad autónoma de Andalucía, España.
         Este rincón andaluz es conocido por su belleza natural subtropical, su
         rica herencia cultural y su deliciosa gastronomía.
       </p>
-      <div
-        class="relative flex w-full snap-mandatory snap-x gap-x-4 max-w-4xl overflow-x-scroll"
-      >
-        {
-          arquitecturaPictures.map((img) => {
-            return (
-              <Image
-                src={img.picture}
-                width={620}
-                height={350}
-                alt={img.title}
-                class="object-cover w-full snap-center aspect-video rounded-2xl"
-              />
-            );
-          })
-        }
-      </div>
+      <FullImageCarousel items={arquitecturaPictures} id="arquitectura" />
       <p>
         El pueblo se encuentra rodeado de impresionantes paisajes montañosos.
         Los amantes de la naturaleza pueden disfrutar de numerosas rutas de
@@ -120,23 +110,7 @@ const naturalezaPictures = [
         río de la Toba. Estas caminatas son ideales para explorar la flora y
         fauna locales.
       </p>
-      <div
-        class="relative flex w-full snap-mandatory snap-x gap-x-4 max-w-4xl overflow-x-scroll"
-      >
-        {
-          naturalezaPictures.map((img) => {
-            return (
-              <Image
-                src={img.picture}
-                width={620}
-                height={350}
-                alt={img.title}
-                class="object-cover w-full snap-center aspect-video rounded-2xl"
-              />
-            );
-          })
-        }
-      </div>
+      <FullImageCarousel items={naturalezaPictures} id="naturaleza" />
       <p>
         Puedes pasear por sus calles y admirar la arquitectura tradicional
         andaluza, de pasado morisco. Encontrarás en ellas lugares como las

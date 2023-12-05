@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vue": "^3.0.4",
     "@fontsource-variable/red-hat-display": "^5.0.18",
     "@fontsource-variable/work-sans": "^5.0.16",
     "astro": "^3.0.5",

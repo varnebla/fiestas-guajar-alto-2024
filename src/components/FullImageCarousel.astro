@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+  id: string;
+  items: {
+    picture: ImageMetadata;
+    title: string;
+  }[];
+}
+
+const { id, items } = Astro.props;
+---
+
+<full-image-carousel class="relative" data-carousel-id={id}>
+  <div
+    class="flex w-full snap-mandatory snap-x max-w-4xl overflow-x-scroll rounded-2xl scrollbar"
+    id={`carousel-${id}`}
+  >
+    {
+      items.map((img, index) => {
+        return (
+          <Image
+            id={`carousel-${id}-item-${index}`}
+            image-index={index}
+            src={img.picture}
+            width={670}
+            height={350}
+            alt={img.title}
+            class="object-cover w-full snap-center aspect-video z-0"
+          />
+        );
+      })
+    }
+  </div>
+  <button
+    class="absolute left-0 top-[45%] rounded-full p-3 text-white bg-semi-transparent backdrop-blur-sm ml-2"
+    id="buttonPrev"
+  >
+    <svg
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-4 h-4"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+    </svg>
+  </button>
+  <button
+    class="absolute right-0 top-[45%] rounded-full p-3 text-white bg-stone-700/40 backdrop-blur-sm mr-2"
+    id="buttonNext"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-4 h-4"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+    </svg>
+  </button>
+</full-image-carousel>
+
+<style>
+  .scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<script>
+  class FullImageCarousel extends HTMLElement {
+    constructor() {
+      super();
+      const carouselId = this.dataset.carouselId;
+
+      const buttonNext = this.querySelector('#buttonNext');
+      const buttonPrev = this.querySelector('#buttonPrev');
+
+      const carousel = this.querySelector(`#carousel-${carouselId}`);
+
+      buttonNext.addEventListener('click', () => {
+        carousel.scrollBy({
+          left: carousel.getBoundingClientRect().width,
+          behavior: 'smooth'
+        });
+      });
+
+      buttonPrev.addEventListener('click', () => {
+        carousel.scrollBy({
+          left: -carousel.getBoundingClientRect().width,
+          behavior: 'smooth'
+        });
+      });
+    }
+  }
+  customElements.define('full-image-carousel', FullImageCarousel);
+</script>
