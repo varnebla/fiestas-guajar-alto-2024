@@ -6,71 +6,96 @@ import FullImageCarousel from '../../components/FullImageCarousel.astro';
 
 import puebloPanoramica from '../../assets/pueblo/pueblo-panorámica.webp';
 
-import arquitecturaFuente from '../../assets/pueblo/arquitectura-1.webp';
-import arquitecturaMuro from '../../assets/pueblo/arquitectura-2.webp';
-import arquitecturaPeana from '../../assets/pueblo/arquitectura-3.webp';
-import arquitecturaIglesia from '../../assets/pueblo/arquitectura-4.webp';
-import arquitecturaCalles from '../../assets/pueblo/arquitectura-5.webp';
-
-import naturalezaNispero from '../../assets/pueblo/naturaleza-1.webp';
-import naturalezaFlor1 from '../../assets/pueblo/naturaleza-2.webp';
-import naturalezaFlor2 from '../../assets/pueblo/naturaleza-3.webp';
-import naturalezaFlor3 from '../../assets/pueblo/naturaleza-4.webp';
-import naturalezaArbol from '../../assets/pueblo/naturaleza-5.jpg';
-import naturalezaCardo from '../../assets/pueblo/naturaleza-6.webp';
-
 const arquitecturaPictures = [
   {
     title: 'Fuente de tres caños de Guájar Alto',
-    picture: arquitecturaFuente,
-    path: ''
+    path: '/src/assets/pueblo/arquitectura-1.webp'
   },
   {
     title: 'Obra de arte urbana en Guájar Alto',
-    picture: arquitecturaMuro,
-    path: ''
+    path: '/src/assets/pueblo/arquitectura-2.webp'
   },
   {
     title: 'Barrio de la Peana de Guájar Alto',
-    picture: arquitecturaPeana,
-    path: ''
+    path: '/src/assets/pueblo/arquitectura-3.webp'
   },
   {
     title: 'Iglesia de Guájar Alto',
-    picture: arquitecturaIglesia,
-    path: ''
+    path: '/src/assets/pueblo/arquitectura-4.webp'
   },
   {
     title: 'Calle de Guájar Alto',
-    picture: arquitecturaCalles,
-    path: ''
+    path: '/src/assets/pueblo/arquitectura-5.webp'
   }
 ];
 
 const naturalezaPictures = [
   {
     title: 'Níspero',
-    picture: naturalezaNispero
+    path: '/src/assets/pueblo/naturaleza-1.webp'
   },
   {
     title: 'Flor',
-    picture: naturalezaFlor1
+    path: '/src/assets/pueblo/naturaleza-2.webp'
   },
   {
     title: 'Flor',
-    picture: naturalezaFlor2
+    path: '/src/assets/pueblo/naturaleza-3.webp'
   },
   {
     title: 'Flor',
-    picture: naturalezaFlor3
+    path: '/src/assets/pueblo/naturaleza-4.webp'
   },
   {
     title: 'Árbol',
-    picture: naturalezaArbol
+    path: '/src/assets/pueblo/naturaleza-5.jpg'
   },
   {
     title: 'Cardo',
-    picture: naturalezaCardo
+    path: '/src/assets/pueblo/naturaleza-6.webp'
+  },
+  {
+    title: 'Cartel Sendero de las Albuñuelas',
+    path: '/src/assets/pueblo/actividades-1.webp'
+  },
+  {
+    title: 'Campo',
+    path: '/src/assets/pueblo/actividades-2.webp'
+  },
+  {
+    title: 'El Castaño',
+    path: '/src/assets/pueblo/actividades-3.webp'
+  },
+  {
+    title: 'Molino',
+    path: '/src/assets/pueblo/actividades-4.webp'
+  }
+];
+
+const puebloPictures = [
+  {
+    title: 'El Portón en Guajar Alto',
+    path: '/src/assets/pueblo/pueblo-1.webp'
+  },
+  {
+    title: 'Obra de arte urbana en Guájar Alto',
+    path: '/src/assets/pueblo/pueblo-2.webp'
+  },
+  {
+    title: 'Barrio de la Peana de Guájar Alto',
+    path: '/src/assets/pueblo/pueblo-3.webp'
+  },
+  {
+    title: 'Calle en Guajar Alto',
+    path: '/src/assets/pueblo/pueblo-4.webp'
+  },
+  {
+    title: 'Plaza de la Iglesia en Guajar Alto',
+    path: '/src/assets/pueblo/pueblo-5.webp'
+  },
+  {
+    title: 'Fuente de un caño en Guajar Alto',
+    path: '/src/assets/pueblo/pueblo-6.webp'
   }
 ];
 ---
@@ -118,6 +143,7 @@ const naturalezaPictures = [
         calles pintorescas como la Peana o el Portón y la iglesia de la
         Encarnación.
       </p>
+      <FullImageCarousel items={puebloPictures} id="pueblo" />
       <p>
         La gastronomía de Guájar Alto es deliciosa y refleja la rica tradición
         culinaria de Granada. Algunos platos y productos típicos de la zona

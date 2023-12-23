@@ -3,10 +3,12 @@ import { Image } from 'astro:assets';
 interface Props {
   id: string;
   items: {
-    picture: ImageMetadata;
+    path: string;
     title: string;
   }[];
 }
+
+const images = import.meta.glob('/src/assets/pueblo/*.{jpeg,jpg,png,webp}');
 
 const { id, items } = Astro.props;
 ---
@@ -22,7 +24,7 @@ const { id, items } = Astro.props;
           <Image
             id={`carousel-${id}-item-${index}`}
             image-index={index}
-            src={img.picture}
+            src={images[img.path]()}
             width={670}
             height={350}
             alt={img.title}
