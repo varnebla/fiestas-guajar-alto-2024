@@ -74,5 +74,43 @@
     ],
     "album": [],
     "highlighted": null
+  },
+  {
+    "id": 5,
+    "slug": "semana-santa",
+    "name": "Semana Santa",
+    "thumbnail": "cabalgata.jpg",
+    "abstract": "Vive la tradición de la Semana Santa en Guájar Alto",
+    "description": "<p>En Guájar Alto, la Semana Santa es una celebración llena de devoción, tradición y colorido.</p><p> Procesiones solemnes, misas y otros eventos culturales y gastronómicos, sumergen a lugareños y visitantes en la esencia de la Semana Santa, creando recuerdos duraderos en medio de la belleza natural y la rica historia de la región. </p><p>Explora las experiencias únicas que ofrece Guájar Alto durante esta festividad religiosa.</p>",
+    "date": "2024/03/28",
+    "location": "Guájar Alto",
+    "sponsors": [
+      {
+        "id": 0,
+        "name": "",
+        "link": ""
+      }
+    ],
+    "album": [],
+    "highlighted": null
+  },
+  {
+    "id": 6,
+    "slug": "semana-cultural",
+    "name": "Semana Cultural",
+    "thumbnail": "cabalgata.jpg",
+    "abstract": "Semana Cultural de Los Guájares: Una fusión festiva de tradición y sabor",
+    "description": "<p>La Semana Cultural en Guájar Alto es un evento anual que une a los tres encantadores pueblos de Los Guájares en una celebración vibrante. Durante esta semana, la región se llena de actividades culturales y gastronómicas, creando un ambiente festivo que refleja la rica herencia de la zona.</p>",
+    "date": "2024/06/01",
+    "location": "Plaza de la Iglesia, Guájar Alto",
+    "sponsors": [
+      {
+        "id": 0,
+        "name": "",
+        "link": ""
+      }
+    ],
+    "album": [],
+    "highlighted": null
   }
 ]

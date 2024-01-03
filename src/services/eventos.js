@@ -5,6 +5,8 @@ import nochebuenaPic from '../assets/eventos/nochebuena.webp';
 import nocheviejaPic from '../assets/eventos/nochevieja.webp';
 import nocheviejaVerticalPic from '../assets/eventos/nochevieja_vertical.jpeg';
 import farolillosPic from '../assets/eventos/cabalgata.jpg';
+import semanaSantaPic from '../assets/eventos/semana-santa.webp';
+import semanaCulturalPic from '../assets/eventos/semana-cultural.webp';
 import guajarExtremePic from '../assets/eventos/guajar-extreme.webp';
 
 const picturesVerticales = {
@@ -12,6 +14,8 @@ const picturesVerticales = {
   nochebuena: nochebuenaPic,
   nochevieja: nocheviejaVerticalPic,
   'cabalgata-reyes': farolillosPic,
+  'semana-santa': semanaSantaPic,
+  'semana-cultural': semanaCulturalPic,
   'guajar-extreme': guajarExtremePic
 };
 const picturesHorizontal = {
@@ -19,6 +23,8 @@ const picturesHorizontal = {
   nochebuena: nochebuenaPic,
   nochevieja: nocheviejaPic,
   'cabalgata-reyes': farolillosPic,
+  'semana-santa': semanaSantaPic,
+  'semana-cultural': semanaCulturalPic,
   'guajar-extreme': guajarExtremePic
 };
 
